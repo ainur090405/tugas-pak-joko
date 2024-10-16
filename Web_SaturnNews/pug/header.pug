@@ -1,0 +1,126 @@
+doctype html
+html(lang="id")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Header atas
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css")
+    style.
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+      }
+
+      header {
+          background-color: #517E81;
+          color: white;
+          padding: 15px 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+
+      .logo {
+          font-size: 24px;
+      }
+
+      nav {
+          display: flex;
+      }
+
+      nav ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+      }
+
+      nav ul li {
+          margin: 0 15px;
+      }
+
+      nav ul li a {
+          color: white;
+          text-decoration: none;
+          transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+          color: #007bff;
+      }
+
+      .search-bar {
+          position: relative;
+      }
+
+      .search-bar input {
+          padding: 5px;
+          border: none;
+          border-radius: 5px;
+      }
+
+      .search-bar button {
+          position: absolute;
+          right: 0;
+          border: none;
+          background-color: #007bff;
+          color: white;
+          padding: 5px 10px;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+      }
+
+      .search-bar button:hover {
+          background-color: #0056b3;
+      }
+
+      @media (max-width: 768px) {
+          nav ul {
+              flex-direction: column;
+              display: none;
+          }
+          nav.active ul {
+              display: flex;
+          }
+          .menu-toggle {
+              display: block;
+              cursor: pointer;
+          }
+      }
+
+      .menu-toggle {
+          display: none;
+          font-size: 24px;
+          color: white;
+      }
+
+  // Mixin untuk komponen header
+  mixin headerComponent()
+    header
+      .logo Saturn News
+      .menu-toggle(onclick="toggleMenu()")
+        i.fas.fa-bars
+      nav
+        ul
+          li: a(href="#home") Beranda
+          li: a(href="#nasional") Nasional
+          li: a(href="#terpopuler") Terpopuler
+          li: a(href="#hiburan") Hiburan
+          li: a(href="#film") Film
+          li: a(href="#kartun") Kartun
+          li: a(href="#about-us") About Us
+        .search-bar
+          input(type="text" placeholder="Cari...")
+          button
+            i.fas.fa-search
+
+  body
+    +headerComponent()
+
+    script.
+      function toggleMenu() {
+          const nav = document.querySelector('nav');
+          nav.classList.toggle('active');
+      }

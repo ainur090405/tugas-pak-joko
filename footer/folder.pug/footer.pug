@@ -1,0 +1,121 @@
+doctype html
+html(lang="id")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title SaturNews
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css")
+    style.
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: white;
+      }
+
+      .footer {
+        background-color: #d8e9ec;
+        padding: 15px 30px; /* Mengurangi padding */
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+      }
+
+      .footer .left {
+        display: flex;
+        align-items: center;
+      }
+
+      .footer .left img {
+        height: 100px; /* Mengurangi tinggi logo */
+        margin-right: 10px;
+      }
+
+      .footer .left .social-icons {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+      }
+
+      .footer .left .social-icons a {
+        color: #7a7a7a;
+        text-decoration: none;
+        margin: 6px 0; /* Mengurangi jarak antara tautan */
+        display: flex;
+        align-items: center; 
+        transition: color 0.3s;
+        line-height: 40px; /* Menyelaraskan tinggi teks dengan logo */
+      }
+
+      .footer .left .social-icons a i {
+        margin-right: 4px; /* Mengurangi jarak antara ikon dan teks */
+        line-height: 40px; /* Menyelaraskan ikon dengan teks */
+      }
+
+      .footer .left .social-icons a:hover {
+        color: #007bff;
+      }
+
+      .footer .right {
+        text-align: right;
+        flex: 1;
+      }
+
+      .footer .right p {
+        margin: 19px 0; /* Mengurangi jarak paragraf */
+        color: #7a7a7a;
+        font-size: 25px; /* Mengurangi ukuran font */
+      }
+
+      .footer .right p a {
+        color: #7a7a7a;
+        text-decoration: none;
+        margin: 0 5px; /* Mengurangi jarak antar tautan */
+        transition: color 0.3s;
+      }
+
+      .footer .right p a:hover {
+        color: #007bff;
+      }
+
+      @media (max-width: 768px) {
+        .footer {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 10px; /* Mengurangi padding untuk mobile */
+        }
+
+        .footer .right {
+          text-align: left;
+        }
+      }
+  body
+    .footer
+      .left
+        img(alt="SaturNews logo" src="/footer/foto/saturnus.png")
+        .social-icons
+          a(href="#")
+            i.fab.fa-instagram
+            | @SaturNews
+          a(href="#")
+            i.fab.fa-facebook
+            | @SaturNews
+          a(href="#")
+            i.fab.fa-twitter
+            | @SaturNews
+      .right
+        p PT. SaturNews
+        p
+          a(href="#") #Nasional
+          a(href="#") #Hiburan
+          a(href="#") #Live
+          a(href="#") #Video
+          a(href="#") #Komik
+          a(href="#") #Terpopuler
+          a(href="#") #Film
+          a(href="#") #Kesehatan
+          a(href="#") #Audio

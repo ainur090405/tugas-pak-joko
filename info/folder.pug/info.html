@@ -1,0 +1,96 @@
+
+<html>
+  <head>
+    <title>Health Tips</title>
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #e0f7fa;
+          margin: 0;
+          padding: 0;
+          height: 100vh; /* Mengisi seluruh tinggi viewport */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .container {
+          width: 80%;
+          max-width: 600px;
+          padding: 20px;
+          box-sizing: border-box;
+          text-align: center;
+      }
+      .section {
+          background-color: #b2ebf2;
+          margin-bottom: 20px;
+          padding: 20px;
+          border-radius: 10px;
+          position: relative;
+          display: none; 
+      }
+      .section.active {
+          display: block;
+      }
+      .section img {
+          width: 400px;
+          height: 200px; 
+          border-radius: 10px;
+      }
+      .section h2 {
+          margin-top: 0;
+          font-size: 18px;
+          font-weight: bold;
+      }
+      .arrow {
+          font-size: 24px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          cursor: pointer;
+      }
+      .arrow-left {
+          left: 10px;
+      }
+      .arrow-right {
+          right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="section active">
+        <h2>HINDARI ROKOK DAN ALKOHOL</h2><img src="https://storage.googleapis.com/a1aa/image/iRTfXUyi6fiM40duJ3GKeHEsZDMQQZdC0aeGAyY4GFA8zknOB.jpg" alt="No smoking and alcohol sign" height="200" width="400"/>
+        <div class="arrow arrow-right" onclick="nextSection()">→</div>
+      </div>
+      <div class="section">
+        <h2>OLAHRAGA TERATUR</h2><img src="https://storage.googleapis.com/a1aa/image/Axqgwt0GQmqxFl7gAfci2uMhmdhHYCwYSZpeGGqGDuW8M5pTA.jpg" alt="People exercising in a park" height="200" width="400"/>
+        <div class="arrow arrow-left" onclick="prevSection()">←</div>
+        <div class="arrow arrow-right" onclick="nextSection()">→</div>
+      </div>
+      <div class="section">
+        <h2>HINDARI STRES</h2><img src="https://storage.googleapis.com/a1aa/image/oGJe8117kCWxAKzLZFIe5h9TAqluBeizayFQBxNwhPE7ZyTnA.jpg" alt="People enjoying at a zoo" height="200" width="400"/>
+        <div class="arrow arrow-left" onclick="prevSection()">←</div>
+      </div>
+    </div>
+    <script>
+      let currentSection = 0; 
+      const sections = document.querySelectorAll('.section');
+      
+      function showSection(index) {
+        sections.forEach((section, i) => {
+          section.classList.toggle('active', i === index); 
+        });
+      }
+      
+      function nextSection() {
+        currentSection = (currentSection + 1) % sections.length; 
+        showSection(currentSection);
+      }
+      
+      function prevSection() {
+        currentSection = (currentSection - 1 + sections.length) % sections.length; 
+        showSection(currentSection);
+      }
+    </script>
+  </body>
+</html>

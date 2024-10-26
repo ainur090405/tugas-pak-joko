@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolom Komentar</title>
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          background-color: #f0f0f0;
+      }
+      .container {
+          width: 300px;
+          padding: 20px;
+          background-color: white;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          text-align: center;
+      }
+      .button {
+          padding: 10px;
+          margin-top: 10px;
+          background-color: #007bff;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+      .comment-section {
+          display: none;
+          margin-top: 15px;
+      }
+      .comment-list {
+          list-style-type: none;
+          padding: 0;
+          margin-top: 10px;
+      }
+      .comment-item {
+          background-color: #f9f9f9;
+          padding: 8px;
+          border-radius: 5px;
+          margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="button" id="commentToggle">Komentar</button>
+      <div class="comment-section" id="commentSection">
+        <input id="commentInput" type="text" placeholder="Tulis komentar..." style="width: 100%; padding: 8px;">
+        <button class="button" id="submitComment" style="margin-top: 10px; width: 100%;">Kirim</button>
+        <ul class="comment-list" id="commentList"></ul>
+      </div>
+    </div>
+    <script>
+      document.getElementById("commentToggle").addEventListener("click", function() {
+          const commentSection = document.getElementById("commentSection");
+          commentSection.style.display = 
+            commentSection.style.display === "none" || commentSection.style.display === "" ? "block" : "none";
+      });
+      
+      document.getElementById("submitComment").addEventListener("click", function() {
+          const commentInput = document.getElementById("commentInput");
+          const commentText = commentInput.value.trim();
+      
+          if (commentText) {
+              const commentList = document.getElementById("commentList");
+              const commentItem = document.createElement("li");
+              commentItem.className = "comment-item";
+              commentItem.textContent = commentText;
+              commentList.appendChild(commentItem);
+              commentInput.value = "";
+          } else {
+              alert("Komentar tidak boleh kosong!");
+          }
+      });
+    </script>
+  </body>
+</html>

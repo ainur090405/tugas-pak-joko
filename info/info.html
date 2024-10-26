@@ -1,0 +1,115 @@
+<html>
+ <head>
+  <title>
+   Health Tips
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Mengisi seluruh tinggi viewport */
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Pusatkan secara vertikal dan horizontal */
+        }
+        .container {
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .section {
+            background-color: #b2ebf2;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+            display: none; /* Awalnya semua section disembunyikan */
+        }
+        .section.active {
+            display: block; /* Hanya section aktif yang tampil */
+        }
+        .section img {
+            width: 400px; /* Lebar gambar diperkecil */
+            height: 200px; /* Tinggi gambar diperkecil */
+            border-radius: 10px;
+        }
+        .section h2 {
+            margin-top: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .arrow {
+            font-size: 24px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        .arrow-left {
+            left: 10px;
+        }
+        .arrow-right {
+            right: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="section active">
+    <h2>
+     HINDARI ROKOK DAN ALKOHOL
+    </h2>
+    <img alt="No smoking and alcohol sign" height="200" src="https://storage.googleapis.com/a1aa/image/iRTfXUyi6fiM40duJ3GKeHEsZDMQQZdC0aeGAyY4GFA8zknOB.jpg" width="400"/>
+    <div class="arrow arrow-right" onclick="nextSection()">
+     →
+    </div>
+   </div>
+   <div class="section">
+    <h2>
+     OLAHRAGA TERATUR
+    </h2>
+    <img alt="People exercising in a park" height="200" src="https://storage.googleapis.com/a1aa/image/Axqgwt0GQmqxFl7gAfci2uMhmdhHYCwYSZpeGGqGDuW8M5pTA.jpg" width="400"/>
+    <div class="arrow arrow-left" onclick="prevSection()">
+     ←
+    </div>
+    <div class="arrow arrow-right" onclick="nextSection()">
+     →
+    </div>
+   </div>
+   <div class="section">
+    <h2>
+     HINDARI STRES
+    </h2>
+    <img alt="People enjoying at a zoo" height="200" src="../https://storage.googleapis.com/a1aa/image/oGJe8117kCWxAKzLZFIe5h9TAqluBeizayFQBxNwhPE7ZyTnA.jpg" width="400"/>
+    <div class="arrow arrow-left" onclick="prevSection()">
+     ←
+    </div>
+   </div>
+  </div>
+
+  <script>
+    let currentSection = 0; // Index section saat ini
+    const sections = document.querySelectorAll('.section'); // Mengambil semua section
+
+    function showSection(index) {
+        sections.forEach((section, i) => {
+            section.classList.toggle('active', i === index); // Tampilkan section sesuai index
+        });
+    }
+
+    function nextSection() {
+        currentSection = (currentSection + 1) % sections.length; // Pindah ke section berikutnya
+        showSection(currentSection);
+    }
+
+    function prevSection() {
+        currentSection = (currentSection - 1 + sections.length) % sections.length; // Pindah ke section sebelumnya
+        showSection(currentSection);
+    }
+  </script>
+ </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolom Komentar, Share, dan Like</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+        }
+        .comment-section, .share-like-section {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .comment-box {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .comment-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .comment {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            cursor: pointer;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .like-count {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Postingan</h2>
+    <p>Ini adalah contoh postingan. Silakan berinteraksi menggunakan tombol di bawah.</p>
+    
+    <div class="share-like-section">
+        <button class="button" id="likeBtn">Like (<span class="like-count" id="likeCount">0</span>)</button>
+        <button class="button" id="shareBtn">Share</button>
+    </div>
+    
+    <div class="comment-section">
+        <h3>Komentar</h3>
+        <input type="text" id="commentInput" class="comment-box" placeholder="Tulis komentar...">
+        <button class="button" id="commentBtn">Kirim</button>
+        <ul id="commentList" class="comment-list"></ul>
+    </div>
+</div>
+
+<script>
+    let likeCount = 0;
+
+    // Event listener untuk tombol like
+    document.getElementById("likeBtn").addEventListener("click", function() {
+        likeCount++;
+        document.getElementById("likeCount").textContent = likeCount;
+    });
+
+    // Event listener untuk tombol share
+    document.getElementById("shareBtn").addEventListener("click", function() {
+        alert("Postingan telah dibagikan!");
+    });
+
+    // Event listener untuk tombol kirim komentar
+    document.getElementById("commentBtn").addEventListener("click", function() {
+        const commentInput = document.getElementById("commentInput");
+        const commentText = commentInput.value.trim();
+        
+        if (commentText !== "") {
+            const commentList = document.getElementById("commentList");
+            const commentItem = document.createElement("li");
+            commentItem.className = "comment";
+            commentItem.textContent = commentText;
+            commentList.appendChild(commentItem);
+            
+            // Reset kolom komentar
+            commentInput.value = "";
+        } else {
+            alert("Komentar tidak boleh kosong!");
+        }
+    });
+</script>
+
+</body>
+</html>

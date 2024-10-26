@@ -1,0 +1,97 @@
+doctype html
+html(lang="id")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Kolom Komentar, Share, dan Like
+    style.
+      body {
+          font-family: Arial, sans-serif;
+      }
+      .container {
+          width: 50%;
+          margin: auto;
+          padding: 20px;
+      }
+      .comment-section, .share-like-section {
+          margin-top: 20px;
+          padding: 15px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+      }
+      .comment-box {
+          width: 100%;
+          padding: 10px;
+          margin-top: 10px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+      }
+      .comment-list {
+          list-style-type: none;
+          padding: 0;
+      }
+      .comment {
+          margin: 10px 0;
+          padding: 10px;
+          background: #f0f0f0;
+          border-radius: 5px;
+      }
+      .button {
+          display: inline-block;
+          margin-top: 10px;
+          padding: 10px 15px;
+          cursor: pointer;
+          background: #007BFF;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          text-align: center;
+      }
+      .like-count {
+          font-weight: bold;
+      }
+  body
+    .container
+      h2 Postingan
+      p Ini adalah contoh postingan. Silakan berinteraksi menggunakan tombol di bawah.
+      
+      .share-like-section
+        button.button#likeBtn Like (
+          span.like-count#likeCount 0
+        )
+        button.button#shareBtn Share
+
+      .comment-section
+        h3 Komentar
+        input#commentInput.comment-box(type="text" placeholder="Tulis komentar...")
+        button.button#commentBtn Kirim
+        ul#commentList.comment-list
+
+    script.
+      let likeCount = 0;
+
+      document.getElementById("likeBtn").addEventListener("click", function() {
+          likeCount++;
+          document.getElementById("likeCount").textContent = likeCount;
+      });
+
+      document.getElementById("shareBtn").addEventListener("click", function() {
+          alert("Postingan telah dibagikan!");
+      });
+
+      document.getElementById("commentBtn").addEventListener("click", function() {
+          const commentInput = document.getElementById("commentInput");
+          const commentText = commentInput.value.trim();
+          
+          if (commentText !== "") {
+              const commentList = document.getElementById("commentList");
+              const commentItem = document.createElement("li");
+              commentItem.className = "comment";
+              commentItem.textContent = commentText;
+              commentList.appendChild(commentItem);
+              
+              commentInput.value = "";
+          } else {
+              alert("Komentar tidak boleh kosong!");
+          }
+      });

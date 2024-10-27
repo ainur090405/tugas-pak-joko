@@ -4,19 +4,48 @@ html(lang="id")
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Rating Bintang
-    link(rel="stylesheet" href="like.css") // Link ke file CSS
+    style.
+      body {
+          font-family: Arial, sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          background-color: #f0f0f0;
+      }
+      .container {
+          width: 300px;
+          padding: 20px;
+          background-color: white;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          text-align: center;
+      }
+      .star-rating {
+          display: flex;
+          justify-content: center;
+      }
+      .star {
+          font-size: 30px;
+          color: #ccc;
+          cursor: pointer;
+          margin: 0 5px;
+      }
+      .star.selected {
+          color: #ffcc00; 
+      }
   body
     .container
       p rating postingan.
-
       .star-rating#starRating
         span.star(data-value="1") ★
         span.star(data-value="2") ★
         span.star(data-value="3") ★
         span.star(data-value="4") ★
         span.star(data-value="5") ★
-        
-      p Rating: <span#ratingValue>0</span>
+      p Rating: 
+        span#ratingValue 0
 
     script.
       const stars = document.querySelectorAll('.star');
@@ -27,9 +56,9 @@ html(lang="id")
               const rating = star.getAttribute('data-value');
               ratingValue.textContent = rating;
 
-              // Menghapus kelas 'selected' dari semua bintang
+             
               stars.forEach(s => s.classList.remove('selected'));
-              // Menambahkan kelas 'selected' pada bintang yang dipilih
+              
               star.classList.add('selected');
               let previousStar = star.previousElementSibling;
 
@@ -39,3 +68,4 @@ html(lang="id")
               }
           });
       });
+

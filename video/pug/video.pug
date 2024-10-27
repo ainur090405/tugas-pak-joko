@@ -4,49 +4,26 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Document
-    style.
-      body {
-        background-color: #2b5a5a;
-        font-family: Arial, sans-serif;
-        color: #000000;
-        margin: 0;
-        padding: 0;
-      }
-      .container {
-        width: 100%;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-      .news-item {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-        padding: 10px;
-        background-color: #2b5a5a;
-        border: 1px solid #2b5a5a;
-        border-bottom: 1px solid #000000;
-      }
-      .news-item img {
-        width: 150px;
-        height: 100px;
-        margin-right: 20px;
-      }
-      .news-item p {
-        margin: 0;
-        font-size: 18px;
-      }
+    link(rel="stylesheet" href="style.css")
   body
-    .container
-      .news-item
-        img(src="foto/image copy 2.png", alt="Aerial view of a flooded area with houses and trees submerged in water", width="286", height="146")
-        p VIDEO: Banjir Hantam Rumania Timur, 4 Warga Dilaporkan Tewas
-      .news-item
-        img(src="foto/image copy.png", alt="A character from the movie Beetlejuice with green hair and a striped suit", width="286", height="146")
-        p VIDEO: Beetlejuice Beetlejuice Masih Berkuasa di Box Office Pekan Ini
-      .news-item
-        img(src="foto/image.png", alt="A rocket launching into the sky with clouds in the background", width="286", height="146")
-        p VIDEO: Momen Iran Sukses Kirim Satelit Chamran-1 ke Orbit Bumi
-      .news-item
-        img(src="foto/image copy 3.png", alt="A person speaking at a podium with a serious expression", width="286", height="146")
-        p VIDEO: Momen Kamala Harris-Donald Trump Salaman di Acara 911
+    .news-item(onclick="animateItem(this)")
+      img(alt="Aerial view of a flooded area with houses and trees submerged in water" src="https://storage.googleapis.com/a1aa/image/ugwsX0pfdNwKDawX3LGRN3pUQZoR1JyhA3SmfbdMAQVA1iqTA.jpg")
+      div VIDEO: Banjir Hantam Rumania Timur, 4 Warga Dilaporkan Tewas
+    .news-item(onclick="animateItem(this)")
+      img(alt="A character with green hair and white face paint in a dark setting" src="https://storage.googleapis.com/a1aa/image/STLNjnf35mzHACQkLOl7drrAZWeLE7iBp3uIDbuxrjYD1iqTA.jpg")
+      div VIDEO: Beetlejuice Beetlejuice Masih Berkuasa di Box Office Pekan Ini
+    .news-item(onclick="animateItem(this)")
+      img(alt="A rocket launching into the sky with smoke and fire at the base" src="https://storage.googleapis.com/a1aa/image/fJ9WFfdC3qsQ1kaEwMcalF9NN0OWvtDiFKtLwG5oKQLfpFVnA.jpg")
+      div VIDEO: Momen Iran Sukses Kirim Satelit Chamran-1 ke Orbit Bumi
+    .news-item(onclick="animateItem(this)")
+      img(alt="A person speaking at an event with a dark background" src="https://storage.googleapis.com/a1aa/image/J4yZex06rehqwkqezfLSkmWPhoSu0KBqep8nJHChaqKSoWUdC.jpg")
+      div VIDEO: Momen Kamala Harris-Donald Trump Salaman di Acara 911
+
+    script.
+      function animateItem(item) {
+        item.style.transition = "transform 0.3s ease";
+        item.style.transform = "scale(1.1)";
+        setTimeout(() => {
+          item.style.transform = "scale(1)";
+        }, 300);
+      }

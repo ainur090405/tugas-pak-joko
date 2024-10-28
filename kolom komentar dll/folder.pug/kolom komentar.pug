@@ -1,0 +1,39 @@
+doctype html
+html(lang="id")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Kolom Komentar
+    link(rel="stylesheet" href="../kolom komentar.css") // Link ke file CSS
+  body
+    .container
+
+      button.button#commentToggle Komentar
+
+      .comment-section#commentSection
+        input#commentInput(type="text" placeholder="Tulis komentar..." style="width: 100%; padding: 8px;")
+        button.button#submitComment(style="margin-top: 10px; width: 100%;") Kirim
+        ul#commentList.comment-list
+
+    script.
+      document.getElementById("commentToggle").addEventListener("click", function() {
+          const commentSection = document.getElementById("commentSection");
+          commentSection.style.display = 
+            commentSection.style.display === "none" || commentSection.style.display === "" ? "block" : "none";
+      });
+
+      document.getElementById("submitComment").addEventListener("click", function() {
+          const commentInput = document.getElementById("commentInput");
+          const commentText = commentInput.value.trim();
+
+          if (commentText) {
+              const commentList = document.getElementById("commentList");
+              const commentItem = document.createElement("li");
+              commentItem.className = "comment-item";
+              commentItem.textContent = commentText;
+              commentList.appendChild(commentItem);
+              commentInput.value = "";  // Hapus input setelah kirim
+          } else {
+              alert("Komentar tidak boleh kosong!");
+          }
+      });

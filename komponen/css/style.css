@@ -88,11 +88,9 @@ body {
   background-color: #ddd;
 }
 
-/* Footer Styles */
 .footer {
   background-color: #d8e9ec;
   padding: 15px 30px;
-  position: fixed;
   bottom: 0;
   width: 100%;
   display: flex;
@@ -100,6 +98,7 @@ body {
   align-items: center;
   box-sizing: border-box;
   flex-wrap: wrap;
+  margin-top: 113px;
 }
 
 .footer .left {
@@ -108,7 +107,7 @@ body {
 }
 
 .footer .left img {
-  height: 100px;
+  height: 50px;
   margin-right: 10px;
 }
 
@@ -145,14 +144,20 @@ body {
 .footer .right p {
   margin: 19px 0;
   color: #7a7a7a;
-  font-size: 25px;
+  font-size: 15px;
 }
+.satur{
+  margin-right: 230px;
+  color: #7a7a7a;
+
+} 
 
 .footer .right p a {
   color: #7a7a7a;
   text-decoration: none;
   margin: 0 5px;
   transition: color 0.3s;
+  font-size: 15px;
 }
 
 .footer .right p a:hover {
@@ -171,8 +176,6 @@ body {
   }
 }
 
-/* Additional Styles for Home Page */
-
 .body-style {
   background-color: #e9eeef;
   font-family: Arial, sans-serif;
@@ -180,7 +183,6 @@ body {
   padding: 0;
 }
 
-/* Navbar for Home Page */
 .navbar-style {
   background-color: #5a7d7c;
   padding: 10px;
@@ -195,19 +197,20 @@ body {
   color: #000;
   font-weight: bold;
   font-size: 18px;
+  text-decoration: none;
 }
 
-/* Content Style for Home Page */
 .content-style {
   background-color: #5a7d7c;
   padding: 20px;
   display: flex;
   justify-content: space-around;
   border-radius: 20px;
-  margin: 20px 20px 0; /* Added top margin to create space below navbar */
+  margin: 20px 20px 0;
+  animation: shake 0.5s infinite;  
+  text-decoration: none;
 }
 
-/* Box Styles */
 .box-style {
   width: 100px;
   height: 100px;
@@ -216,10 +219,12 @@ body {
   justify-content: center;
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
 }
 
 .box-heart {
   background-color: #a5673f;
+  text-decoration: none;
 }
 
 .box-live {
@@ -227,10 +232,12 @@ body {
   color: #000;
   font-weight: bold;
   font-size: 18px;
+  text-decoration: none;
 }
 
 .box-video {
   background-color: #5a5a5a;
+  text-decoration: none;
 }
 
 .box-audio {
@@ -238,18 +245,23 @@ body {
   color: #000;
   font-weight: bold;
   font-size: 18px;
+  text-decoration: none;
 }
 
 .box-style i {
   font-size: 40px;
   color: #000;
+  text-decoration: none;
 }
+
 
 /* Home Button Container */
 .home-button-container {
   display: flex;
   justify-content: center;
-  margin-top: 20px; /* Adjusts space between navbar and button */
+  margin-top: 20px;
+  text-decoration: none;
+
 }
 
 /* Home Button Styling */
@@ -263,10 +275,12 @@ body {
   font-size: 18px;
   text-decoration: none;
   text-align: center;
+  text-decoration: none;
 }
 
 .home-button a:hover {
-  background-color: #4a6a6a; /* Optional hover effect */
+  background-color: #4a6a6a;
+  text-decoration: none; 
 }
 
 /* Body Style */
@@ -561,6 +575,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-inline: 200px;
 }
 
 /* Header Section */

@@ -1,13 +1,33 @@
+include pug/berita.pug
+include pug/buttom.pug
+include pug/edukasi 1.pug
+include pug/edukasi 2.pug
+include pug/edukasi 3.pug
+include pug/edukasi 4.pug
+include pug/footer.pug
+include pug/gambar berita.pug
+include pug/haeder.pug
+include pug/info.pug
+include pug/info 2.pug
+include pug/info 3.pug
+include pug/kartun.pug
+include pug/kesehatan.pug
+include pug/kolom komentar.pug
+include pug/kontak.pug
+include pug/like.pug
+include pug/panah.pug
+include pug/video.pug
+include pug/_component.pug
+include
 doctype html
 html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
-    body        
-        block navigasi
-            +navigasi()
-        block header
-        block content            
-        block footer
-            +footer()
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title saturnusnews - Berita
+    block rel
+        link(rel="stylesheet" href="css/haerfot.css")
+  body
+    +haeder()
+    block main
+    +footer()

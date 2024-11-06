@@ -1,0 +1,71 @@
+
+<inc></inc><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>saturnusnews - Berita</title>
+    <link rel="stylesheet" href="css/haerfot.css">
+  </head>
+  <body>
+    <header>
+      <div class="logo">Saturn News</div>
+      <div class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu"><i class="fas fa-bars"></i></div>
+      <nav>
+        <ul>
+          <li><a href="#home" onclick="closeMenu()">Beranda</a></li>
+          <li><a href="#nasional" onclick="closeMenu()">Nasional</a></li>
+          <li><a href="#terpopuler" onclick="closeMenu()">Terpopuler</a></li>
+          <li><a href="#hiburan" onclick="closeMenu()">Hiburan</a></li>
+          <li><a href="#film" onclick="closeMenu()">Film</a></li>
+          <li><a href="#kartun" onclick="closeMenu()">Kartun</a></li>
+          <li><a href="#about-us" onclick="toggleDropdown(event)">About Us</a>
+            <div class="about-dropdown">
+              <div class="menu-item" onclick="closeMenu()">Kontak</div>
+              <div class="menu-item" onclick="closeMenu()">Redaksi</div>
+              <div class="menu-item" onclick="closeMenu()">Pedoman Berita</div>
+              <div class="menu-item" onclick="closeMenu()">Visi dan Misi</div>
+              <div class="menu-item" onclick="closeMenu()">FAQ</div>
+              <div class="menu-item" onclick="closeMenu()">Disclaimer</div>
+            </div>
+          </li>
+        </ul>
+        <div class="search-bar">
+          <input type="text" placeholder="Cari..."/>
+          <button aria-label="Search"><i class="fas fa-search"></i></button>
+        </div>
+      </nav>
+    </header>
+    <script>
+      function toggleMenu() {
+        const nav = document.querySelector('nav');
+        nav.classList.toggle('active');
+      }
+      
+      function closeMenu() {
+        const nav = document.querySelector('nav');
+        nav.classList.remove('active');
+        document.querySelector('.about-dropdown').style.display = 'none'; // Close dropdown on link click
+      }
+      
+      function toggleDropdown(event) {
+        const dropdown = document.querySelector('.about-dropdown');
+        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        event.stopPropagation(); // Prevent event from bubbling up
+      }
+      
+      document.addEventListener('click', function() {
+        document.querySelector('.about-dropdown').style.display = 'none'; // Close dropdown if clicking outside
+      });
+    </script>
+    <div class="footer">
+      <div class="left"><img alt="SaturNews logo" src="/footer/foto/saturnus.png"/>
+        <div class="social-icons"><a href="#"> <i class="fab fa-instagram"></i>@SaturNews</a><a href="#"> <i class="fab fa-facebook"></i>@SaturNews</a><a href="#"> <i class="fab fa-twitter"></i>@SaturNews</a></div>
+      </div>
+      <div class="right">
+        <p>PT. SaturNews</p>
+        <p><a href="#">#Nasional</a><a href="#">#Hiburan</a><a href="#">#Live</a><a href="#">#Video</a><a href="#">#Komik</a><a href="#">#Terpopuler</a><a href="#">#Film</a><a href="#">#Kesehatan</a><a href="#">#Audio</a></p>
+      </div>
+    </div>
+  </body>
+</html>

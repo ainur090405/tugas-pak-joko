@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>saturnusnews - Berita</title>
+    <link rel="stylesheet" href="css/buttom.css">
+  </head>
+  <body>
+    <header>
+      <div class="logo">Saturn News</div>
+      <div class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu"><i class="fas fa-bars"></i></div>
+      <nav>
+        <ul>
+          <li><a href="#home" onclick="closeMenu()">Beranda</a></li>
+          <li><a href="#nasional" onclick="closeMenu()">Nasional</a></li>
+          <li><a href="#terpopuler" onclick="closeMenu()">Terpopuler</a></li>
+          <li><a href="#hiburan" onclick="closeMenu()">Hiburan</a></li>
+          <li><a href="#film" onclick="closeMenu()">Film</a></li>
+          <li><a href="#kartun" onclick="closeMenu()">Kartun</a></li>
+          <li><a href="#about-us" onclick="toggleDropdown(event)">About Us</a>
+            <div class="about-dropdown">
+              <a href="kontak.html"> <div class="menu-item" >Kontak</div></a>
+              <a href="redaksi.html"> <div class="menu-item">Redaksi</div></a>
+              <a href="pedoman berita.html"> <div class="menu-item">Pedoman Berita</div></a>
+              <a href="visi dan misi.html"> <div class="menu-item" >Visi dan Misi</div></a>
+              <a href="faq.html"> <div class="menu-item" >FAQ</div></a>
+              <a href="disclaimer.html"> <div class="menu-item">Disclaimer</div></a>
+            </div>
+          </li>
+        </ul>
+        <div class="search-bar">
+          <input type="text" placeholder="Cari..."/>
+          <button aria-label="Search"><i class="fas fa-search"></i></button>
+        </div>
+      </nav>
+    </header>
+    <script>
+      function toggleMenu() {
+        const nav = document.querySelector('nav');
+        nav.classList.toggle('active');
+      }
+      
+      function closeMenu() {
+        const nav = document.querySelector('nav');
+        nav.classList.remove('active');
+        document.querySelector('.about-dropdown').style.display = 'none'; // Close dropdown on link click
+      }
+      
+      function toggleDropdown(event) {
+        const dropdown = document.querySelector('.about-dropdown');
+        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        event.stopPropagation(); // Prevent event from bubbling up
+      }
+      
+      document.addEventListener('click', function() {
+        document.querySelector('.about-dropdown').style.display = 'none'; // Close dropdown if clicking outside
+      });
+    </script>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="button.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        </head>
+        </html>
+        <body>
+
+      <div class="home">HOME</div>
+      <div class="navbar">
+        <div class="icon-heart"><i class="fas fa-heartbeat"></i></div>
+        <div class="icon-live">LIVE</div>
+        <div class="icon-video"><i class="fas fa-video"></i></div>
+        <div class="icon-audio">AUDIO</div>
+    </div>
+    <div class="footer">
+      <div class="left"><img alt="SaturNews logo" src="logo.png"/>
+        <div class="social-icons"><a href="#"> <i class="fab fa-instagram"></i>@SaturNews</a><a href="#"> <i class="fab fa-facebook"></i>@SaturNews</a><a href="#"> <i class="fab fa-twitter"></i>@SaturNews</a></div>
+      </div>
+      <div class="right">
+        <p>PT. SaturNews</p>
+        <p><a href="#">#Nasional</a><a href="#">#Hiburan</a><a href="#">#Live</a><a href="#">#Video</a><a href="#">#Komik</a><a href="#">#Terpopuler</a><a href="#">#Film</a><a href="#">#Kesehatan</a><a href="#">#Audio</a></p>
+      </div>
+    </div>
+  </body>
+</html>

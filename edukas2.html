@@ -29,46 +29,49 @@
       <div class="navbar-right">
         <div class="search-container">
           <input type="text" placeholder="Cari..."/>
-          <button aria-label="Search"><i class="fas fa-search"></i></button>
+          <button type="submit"><i class="fas fa-search"></i></button>
         </div>
-      </nav>
-    </header>
-    <script>
-      function toggleMenu() {
-        const nav = document.querySelector('nav');
-        nav.classList.toggle('active');
-      }
-      
-      function closeMenu() {
-        const nav = document.querySelector('nav');
-        nav.classList.remove('active');
-        document.querySelector('.about-dropdown').style.display = 'none'; 
-      }
-      
-      function toggleDropdown(event) {
-        const dropdown = document.querySelector('.about-dropdown');
-        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-        event.stopPropagation(); // Prevent event from bubbling up
-      }
-      
-      document.addEventListener('click', function() {
-        document.querySelector('.about-dropdown').style.display = 'none'; 
-      });
-    </script>
-    <div class="card-container">
-      <div class="card card-1"><img alt="Illustration of a blood pressure monitor on an arm with a heart symbol" src="https://storage.googleapis.com/a1aa/image/hSxUoJiDdFq6LVdelJYc9aEvyxF8mmLdqtEsBSS7cLeiniqTA.jpg"/></div>
-      <div class="card card-2"><img alt="Illustration of a nose with an oxygen symbol" src="https://storage.googleapis.com/a1aa/image/iIydQyd6KCI9JZS2eSkZYvNlg0Msk6ispPw69SFfOfsNPFVnA.jpg"/></div>
-      <div class="card card-3"><img alt="Illustration of feet on a weighing scale" src="https://storage.googleapis.com/a1aa/image/Hh9J8fW0Id2udiRBXKGf8yOmtCClllh5df8e5TwAlf3j8UUdC.jpg"/></div>
-      <div class="card card-4"><img alt="Illustration of a thermometer with a degree symbol" src="https://storage.googleapis.com/a1aa/image/sr1QakpIp36MEhnMzkXNiw1kzCISbcsg4UEa3i1O8Ra5po6E.jpg"/></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="card" id="card1">
+        <div class="card-title">KURANGI POLUSI</div><img src="https://storage.googleapis.com/a1aa/image/qtZiY7Z02hobIxeNx04PJIWyyuexRxfDBEoYgdirVj1lb1VnA.jpg" alt="Illustration of a person wearing a mask with pollution elements like factories and cars in the background" width="600" height="300"/>
+        <div class="navigation"><span></span><a onclick="nextCard()">→</a></div>
+      </div>
+      <div class="card" id="card2">
+        <div class="card-title">PENGELOLAAN SAMPAH</div><img src="https://storage.googleapis.com/a1aa/image/BWVkUzTPYeUfqUKHMaMi5RbsoCDKIf7r4MWlrbnnbe4X3qrOB.jpg" alt="Illustration of a person pointing to a recycle symbol" width="600" height="300"/>
+        <div class="navigation"><a onclick="prevCard()">←</a><a onclick="nextCard()">→</a></div>
+      </div>
+      <div class="card" id="card3">
+        <div class="card-title">PENANAMAN POHON</div><img src="https://storage.googleapis.com/a1aa/image/6aJIuefw9EhfpIn8fKa1EGS7ejwAsjn5XXhVGT139AhmuVXdC.jpg" alt="Illustration of a person planting a tree" width="600" height="300"/>
+        <div class="navigation"><a onclick="prevCard()">←</a><span></span></div>
+      </div>
     </div>
     <script>
-      const cards = document.querySelectorAll('.card');
+      let currentCard = 0;
+      const cards = document.querySelectorAll(".card");
       
-      cards.forEach(card => {
-          card.addEventListener('click', () => {
-              card.classList.toggle('active');
-          });
-      });
+      function showCard(index) {
+        cards.forEach((card, i) => {
+          card.style.display = i === index ? "block" : "none";
+        });
+      }
+      
+      function nextCard() {
+        if (currentCard < cards.length - 1) {
+          currentCard++;
+          showCard(currentCard);
+        }
+      }
+      
+      function prevCard() {
+        if (currentCard > 0) {
+          currentCard--;
+          showCard(currentCard);
+        }
+      }
+      
+      showCard(currentCard);
     </script>
     <div class="footer">
       <div class="left"><img alt="SaturNews logo" src="/footer/foto/saturnus.png"/>

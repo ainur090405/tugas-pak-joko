@@ -827,3 +827,73 @@ body.kk {
   text-decoration: none;
   cursor: pointer;
 }
+
+/*kesehatan*/
+body.ooo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #EFF3F3;
+  margin: 0;
+}
+.card-containerggg {
+  display: flex;
+  gap: 20px;
+}
+.card.l {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  padding: 10px;
+}
+.card img.o {
+  width: 80px;
+  height: 120px;
+}
+.card:active.k {
+  transform: scale(0.95);
+}
+/*kartun*/
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #fff;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-item {
+  text-align: center;
+  margin: 0 20px;
+}
+
+.gallery-item img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #000;
+}

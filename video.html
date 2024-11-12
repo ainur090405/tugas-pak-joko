@@ -20,9 +20,9 @@
       <!-- Left side (Logo)-->
       <div class="navbar-left"><a href="#">Saturn News</a></div>
       <!-- Center (Navigation Links)-->
-      <div class="navbar-center"><a href="index.html">beranda</a><a href="nasional.html">nasional</a><a href="populer.html">terpopuler</a><a href="hiburan.html">hiburan</a><a href="film.html">film</a><a href="kartun.html">kartun</a>
+      <div class="navbar-center"><a href="index.html">beranda</a><a href="nasional.html">nasional</a><a href="populer.html">terpopuler</a><a href="hiburan.html">hiburan</a><a href="film.html">film</a><a href="#">kartun</a>
         <div class="dropdown"><a href="#">about us</a>
-          <div class="dropdown-content"><a href="contact.html">kontak</a><a href="redaksi.html">redaksi</a><a href="pedomanberita.html">pedoman berita</a><a href="visimisi.html">visi dan misi</a><a href="faq.html">FAQ</a><a href="#">disclaimer</a><a href="pedomanberita.html">pedoman berita</a></div>
+          <div class="dropdown-content"><a href="contact.html">kontak</a><a href="redaksi.html">redaksi</a><a href="pedomanberita.html">pedoman berita</a><a href="visimisi.html">visi dan misi</a><a href="faq.html">FAQ</a><a href="#">disclaimer</a><a href="#">pedoman berita</a></div>
         </div>
       </div>
       <!-- Right side (Search Container)-->
@@ -33,27 +33,50 @@
         </div>
       </div>
     </div>
-    <div class="news-item" onclick="animateItem(this)"><img alt="Aerial view of a flooded area with houses and trees submerged in water" src="https://storage.googleapis.com/a1aa/image/ugwsX0pfdNwKDawX3LGRN3pUQZoR1JyhA3SmfbdMAQVA1iqTA.jpg"/>
-      <div>VIDEO: Banjir Hantam Rumania Timur, 4 Warga Dilaporkan Tewas</div>
+    <div class="news-gallery">
+      <script>
+        const newsItems = [
+          {
+            src: "https://storage.googleapis.com/a1aa/image/ugwsX0pfdNwKDawX3LGRN3pUQZoR1JyhA3SmfbdMAQVA1iqTA.jpg",
+            alt: "Aerial view of a flooded area with houses and trees submerged in water",
+            title: "VIDEO: Banjir Hantam Rumania Timur, 4 Warga Dilaporkan Tewas"
+          },
+          {
+            src: "https://storage.googleapis.com/a1aa/image/STLNjnf35mzHACQkLOl7drrAZWeLE7iBp3uIDbuxrjYD1iqTA.jpg",
+            alt: "A character with green hair and white face paint in a dark setting",
+            title: "VIDEO: Beetlejuice Beetlejuice Masih Berkuasa di Box Office Pekan Ini"
+          },
+          {
+            src: "https://storage.googleapis.com/a1aa/image/fJ9WFfdC3qsQ1kaEwMcalF9NN0OWvtDiFKtLwG5oKQLfpFVnA.jpg",
+            alt: "A rocket launching into the sky with smoke and fire at the base",
+            title: "VIDEO: Momen Iran Sukses Kirim Satelit Chamran-1 ke Orbit Bumi"
+          },
+          {
+            src: "https://storage.googleapis.com/a1aa/image/J4yZex06rehqwkqezfLSkmWPhoSu0KBqep8nJHChaqKSoWUdC.jpg",
+            alt: "A person speaking at an event with a dark background",
+            title: "VIDEO: Momen Kamala Harris-Donald Trump Salaman di Acara 911"
+          }
+        ];
+        
+        newsItems.forEach(item => {
+          document.write(`
+            <div class="news-item" onclick="animateItem(this)">
+              <img src="${item.src}" alt="${item.alt}" width="300" height="200"/>
+              <div>${item.title}</div>
+            </div>
+          `);
+        });
+        
+      </script>
+      <script>
+        function animateItem(item) {
+          item.style.transform = "scale(1.1)";
+          setTimeout(() => {
+            item.style.transform = "scale(1)";
+          }, 300);
+        }
+      </script>
     </div>
-    <div class="news-item" onclick="animateItem(this)"><img alt="A character with green hair and white face paint in a dark setting" src="https://storage.googleapis.com/a1aa/image/STLNjnf35mzHACQkLOl7drrAZWeLE7iBp3uIDbuxrjYD1iqTA.jpg"/>
-      <div>VIDEO: Beetlejuice Beetlejuice Masih Berkuasa di Box Office Pekan Ini</div>
-    </div>
-    <div class="news-item" onclick="animateItem(this)"><img alt="A rocket launching into the sky with smoke and fire at the base" src="https://storage.googleapis.com/a1aa/image/fJ9WFfdC3qsQ1kaEwMcalF9NN0OWvtDiFKtLwG5oKQLfpFVnA.jpg"/>
-      <div>VIDEO: Momen Iran Sukses Kirim Satelit Chamran-1 ke Orbit Bumi</div>
-    </div>
-    <div class="news-item" onclick="animateItem(this)"><img alt="A person speaking at an event with a dark background" src="https://storage.googleapis.com/a1aa/image/J4yZex06rehqwkqezfLSkmWPhoSu0KBqep8nJHChaqKSoWUdC.jpg"/>
-      <div>VIDEO: Momen Kamala Harris-Donald Trump Salaman di Acara 911</div>
-    </div>
-    <script>
-      function animateItem(item) {
-        item.style.transition = "transform 0.3s ease";
-        item.style.transform = "scale(1.1)";
-        setTimeout(() => {
-          item.style.transform = "scale(1)";
-        }, 300);
-      }
-    </script>
     <div class="footer">
       <div class="left"><img alt="SaturNews logo" src="/footer/foto/saturnus.png"/>
         <div class="social-icons"><a href="#"> <i class="fab fa-instagram"></i>@SaturNews</a><a href="#"> <i class="fab fa-facebook"></i>@SaturNews</a><a href="#"> <i class="fab fa-twitter"></i>@SaturNews</a></div>

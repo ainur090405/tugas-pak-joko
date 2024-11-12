@@ -20,9 +20,9 @@
       <!-- Left side (Logo)-->
       <div class="navbar-left"><a href="#">Saturn News</a></div>
       <!-- Center (Navigation Links)-->
-      <div class="navbar-center"><a href="index.html">beranda</a><a href="nasional.html">nasional</a><a href="populer.html">terpopuler</a><a href="hiburan.html">hiburan</a><a href="film.html">film</a><a href="#">kartun</a>
+      <div class="navbar-center"><a href="index.html">beranda</a><a href="nasional.html">nasional</a><a href="populer.html">terpopuler</a><a href="hiburan.html">hiburan</a><a href="film.html">film</a><a href="kartun.html">kartun</a>
         <div class="dropdown"><a href="#">about us</a>
-          <div class="dropdown-content"><a href="contact.html">kontak</a><a href="redaksi.html">redaksi</a><a href="pedomanberita.html">pedoman berita</a><a href="visimisi.html">visi dan misi</a><a href="faq.html">FAQ</a><a href="#">disclaimer</a><a href="#">pedoman berita</a></div>
+          <div class="dropdown-content"><a href="contact.html">kontak</a><a href="redaksi.html">redaksi</a><a href="pedomanberita.html">pedoman berita</a><a href="visimisi.html">visi dan misi</a><a href="faq.html">FAQ</a><a href="#">disclaimer</a><a href="pedomanberita.html">pedoman berita</a></div>
         </div>
       </div>
       <!-- Right side (Search Container)-->
@@ -33,23 +33,23 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="card" id="card1">
-        <div class="card-title">PEMANTAUAN CUACA</div><img src="https://storage.googleapis.com/a1aa/image/y7uhfPaM1wQDRK6u4HsP3DU96yFOu1En123VQqoBssrQsd1JA.jpg" alt="Illustration of a person wearing a mask with pollution elements like factories and cars in the background" width="600" height="300"/>
-        <div class="navigation"><span></span><a onclick="nextCard()">→</a></div>
+    <div class="containered">
+      <div class="carded" id="card1">
+        <div class="carded-title">PEMANTAUAN CUACA</div><img src="https://storage.googleapis.com/a1aa/image/y7uhfPaM1wQDRK6u4HsP3DU96yFOu1En123VQqoBssrQsd1JA.jpg" alt="Illustration of a person wearing a mask with pollution elements like factories and cars in the background" width="300" height="300"/>
+        <div class="navigationed"><span></span><a onclick="nextCard()">→</a></div>
       </div>
-      <div class="card" id="card2">
-        <div class="card-title">KONTROL POLUSI</div><img src="https://storage.googleapis.com/a1aa/image/NV6fuCoOyu3XACfefGEa1s7T021mi3g6LWwx4ELKBJzAitrOB.jpg" alt="Illustration of a person pointing to a recycle symbol" width="600" height="300"/>
-        <div class="navigation"><a onclick="prevCard()">←</a><a onclick="nextCard()">→</a></div>
+      <div class="carded" id="card2">
+        <div class="carded-title">KONTROL POLUSI</div><img src="https://storage.googleapis.com/a1aa/image/NV6fuCoOyu3XACfefGEa1s7T021mi3g6LWwx4ELKBJzAitrOB.jpg" alt="Illustration of a person pointing to a recycle symbol" width="300" height="300"/>
+        <div class="navigationed"><a onclick="prevCard()">←</a><a onclick="nextCard()">→</a></div>
       </div>
-      <div class="card" id="card3">
-        <div class="card-title">PENCEGAHAN PERUBAHAN IKLIM</div><img src="https://storage.googleapis.com/a1aa/image/Rr7eUW0smaWtOKlIf4AD3kZjrRiTUe9iEVCdjYCOiYeMitrOB.jpg" alt="Illustration of a person planting a tree" width="600" height="300"/>
-        <div class="navigation"><a onclick="prevCard()">←</a><span></span></div>
+      <div class="carded" id="card3">
+        <div class="carded-title">PENCEGAHAN PERUBAHAN IKLIM</div><img src="https://storage.googleapis.com/a1aa/image/Rr7eUW0smaWtOKlIf4AD3kZjrRiTUe9iEVCdjYCOiYeMitrOB.jpg" alt="Illustration of a person planting a tree" width="300" height="300"/>
+        <div class="navigationed"><a onclick="prevCard()">←</a><span></span></div>
       </div>
     </div>
     <script>
       let currentCard = 0;
-      const cards = document.querySelectorAll(".card");
+      const cards = document.querySelectorAll(".carded");
       
       function showCard(index) {
         cards.forEach((card, i) => {

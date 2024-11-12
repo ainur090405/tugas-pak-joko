@@ -5,7 +5,7 @@ mixin edukasi-2()
         img(src="https://storage.googleapis.com/a1aa/image/qtZiY7Z02hobIxeNx04PJIWyyuexRxfDBEoYgdirVj1lb1VnA.jpg" alt="Illustration of a person wearing a mask with pollution elements like factories and cars in the background" width="600" height="300")
         .navigation
           span
-          a(onclick="nextCard()") →
+          a(onclick="nextCard()") → 
 
       .card#card2
         .card-title PENGELOLAAN SAMPAH
@@ -32,17 +32,13 @@ mixin edukasi-2()
       }
 
       function nextCard() {
-        if (currentCard < cards.length - 1) {
-          currentCard++;
-          showCard(currentCard);
-        }
+        currentCard = (currentCard + 1) % cards.length;
+        showCard(currentCard);
       }
 
       function prevCard() {
-        if (currentCard > 0) {
-          currentCard--;
-          showCard(currentCard);
-        }
+        currentCard = (currentCard - 1 + cards.length) % cards.length;
+        showCard(currentCard);
       }
 
       showCard(currentCard);

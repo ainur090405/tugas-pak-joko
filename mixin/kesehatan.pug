@@ -1,19 +1,30 @@
 mixin kesehatan()
-  .card-container
-    .card.card-1
-      img(alt="Illustration of a blood pressure monitor on an arm with a heart symbol" src="https://storage.googleapis.com/a1aa/image/hSxUoJiDdFq6LVdelJYc9aEvyxF8mmLdqtEsBSS7cLeiniqTA.jpg")
-    .card.card-2
-      img(alt="Illustration of a nose with an oxygen symbol" src="https://storage.googleapis.com/a1aa/image/iIydQyd6KCI9JZS2eSkZYvNlg0Msk6ispPw69SFfOfsNPFVnA.jpg")
-    .card.card-3
-      img(alt="Illustration of feet on a weighing scale" src="https://storage.googleapis.com/a1aa/image/Hh9J8fW0Id2udiRBXKGf8yOmtCClllh5df8e5TwAlf3j8UUdC.jpg")
-    .card.card-4
-      img(alt="Illustration of a thermometer with a degree symbol" src="https://storage.googleapis.com/a1aa/image/sr1QakpIp36MEhnMzkXNiw1kzCISbcsg4UEa3i1O8Ra5po6E.jpg")
+    .card-container#cardContainer
+    script.
+      const cards = [
+        {
+          alt: "Illustration of a blood pressure monitor on an arm with a heart symbol",
+          src: "https://storage.googleapis.com/a1aa/image/hSxUoJiDdFq6LVdelJYc9aEvyxF8mmLdqtEsBSS7cLeiniqTA.jpg"
+        },
+        {
+          alt: "Illustration of a nose with an oxygen symbol",
+          src: "https://storage.googleapis.com/a1aa/image/iIydQyd6KCI9JZS2eSkZYvNlg0Msk6ispPw69SFfOfsNPFVnA.jpg"
+        },
+        {
+          alt: "Illustration of feet on a weighing scale",
+          src: "https://storage.googleapis.com/a1aa/image/Hh9J8fW0Id2udiRBXKGf8yOmtCClllh5df8e5TwAlf3j8UUdC.jpg"
+        },
+        {
+          alt: "Illustration of a thermometer with a degree symbol",
+          src: "https://storage.googleapis.com/a1aa/image/sr1QakpIp36MEhnMzkXNiw1kzCISbcsg4UEa3i1O8Ra5po6E.jpg"
+        }
+      ];
 
-  script.
-    const cards = document.querySelectorAll('.card');
+      const cardContainer = document.getElementById("cardContainer");
 
-    cards.forEach(card => {
-        card.addEventListener('click', () => {
-            card.classList.toggle('active');
-        });
-    });
+      cards.forEach((card, index) => {
+        const cardDiv = document.createElement("div");
+        cardDiv.className = `card card-${index + 1}`;
+        cardDiv.innerHTML = `<img alt="${card.alt}" src="${card.src}"/>`;
+        cardContainer.appendChild(cardDiv);
+      });

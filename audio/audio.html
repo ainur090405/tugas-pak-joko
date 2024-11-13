@@ -11,54 +11,51 @@
     <div class="container">
         <div class="title">SEDANG TRENDING</div>
 
-        <div class="card">
-            <div class="card-image">
-                <img src="https://storage.googleapis.com/a1aa/image/tmn5fwJSyq3iN6kvIceNefKCUeq0YqeBTznn1qHob6SeRsH4JA.jpg" alt="Image of Amin Paling Serius" width="300" height="150">
-                <button class="view-button">View</button>
-            </div>
-            <div class="card-content">
-                <h3>Amin Paling Serius</h3>
-                <p>Song · Sal Priadi, Nadin Amizah · 2019</p>
-                <div class="spotify"><i class="fab fa-spotify"></i> Spotify</div>
-            </div>
-        </div>
+        <script>
+            const cards = [
+                {
+                    src: "https://storage.googleapis.com/a1aa/image/tmn5fwJSyq3iN6kvIceNefKCUeq0YqeBTznn1qHob6SeRsH4JA.jpg",
+                    alt: "Image of Amin Paling Serius",
+                    title: "Amin Paling Serius",
+                    description: "Song · Sal Priadi, Nadin Amizah · 2019"
+                },
+                {
+                    src: "https://storage.googleapis.com/a1aa/image/gGBdB833koqGGBVuMdcJk6U2EJH2QGBR6KUv51fv80dQsH4JA.jpg",
+                    alt: "Image of Runtuh",
+                    title: "Runtuh",
+                    description: "Song · Spotify"
+                },
+                {
+                    src: "https://storage.googleapis.com/a1aa/image/ZgCf8GkDNTUbf0UDXo0CxiecjGEpayPThlpA7qSe2jq4h9APB.jpg",
+                    alt: "Image of Resah",
+                    title: "Resah",
+                    description: "Song · Payung Teduh · 2014"
+                },
+                {
+                    src: "https://storage.googleapis.com/a1aa/image/7GgfibzeIecjQoQB15YdPrG26any1vYwEjR82UwQxzRExeAPB.jpg",
+                    alt: "Image of Sampai Jadi Debu (Menampilkan Gardika Gigih)",
+                    title: "Sampai Jadi Debu (Menampilkan Gardika Gigih)",
+                    description: "Song · Banda Neira · 2016"
+                }
+            ];
 
-        <div class="card">
-            <div class="card-image">
-                <img src="https://storage.googleapis.com/a1aa/image/gGBdB833koqGGBVuMdcJk6U2EJH2QGBR6KUv51fv80dQsH4JA.jpg" alt="Image of Runtuh" width="300" height="150">
-                <button class="view-button">View</button>
-            </div>
-            <div class="card-content">
-                <h3>Runtuh</h3>
-                <p>Song · Spotify</p>
-                <div class="spotify"><i class="fab fa-spotify"></i> Spotify</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-image">
-                <img src="https://storage.googleapis.com/a1aa/image/ZgCf8GkDNTUbf0UDXo0CxiecjGEpayPThlpA7qSe2jq4h9APB.jpg" alt="Image of Resah" width="300" height="150">
-                <button class="view-button">View</button>
-            </div>
-            <div class="card-content">
-                <h3>Resah</h3>
-                <p>Song · Payung Teduh · 2014</p>
-                <div class="spotify"><i class="fab fa-spotify"></i> Spotify</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-image">
-                <img src="https://storage.googleapis.com/a1aa/image/7GgfibzeIecjQoQB15YdPrG26any1vYwEjR82UwQxzRExeAPB.jpg" alt="Image of Sampai Jadi Debu (Menampilkan Gardika Gigih)" width="300" height="150">
-                <button class="view-button">View</button>
-            </div>
-            <div class="card-content">
-                <h3>Sampai Jadi Debu (Menampilkan Gardika Gigih)</h3>
-                <p>Song · Banda Neira · 2016</p>
-                <div class="spotify"><i class="fab fa-spotify"></i> Spotify</div>
-            </div>
-        </div>
-
+            cards.forEach(card => {
+                document.write(`
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="${card.src}" alt="${card.alt}" width="300" height="150">
+                            <button class="view-button">View</button>
+                        </div>
+                        <div class="card-content">
+                            <h3>${card.title}</h3>
+                            <p>${card.description}</p>
+                            <div class="spotify"><i class="fab fa-spotify"></i> Spotify</div>
+                        </div>
+                    </div>
+                `);
+            });
+        </script>
     </div>
 </body>
 </html>
+

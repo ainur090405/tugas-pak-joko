@@ -20,9 +20,9 @@
       <!-- Left side (Logo)-->
       <div class="navbar-left"><a href="#">Saturn News</a></div>
       <!-- Center (Navigation Links)-->
-      <div class="navbar-center"><a href="index.html">beranda</a><a href="nasional.html">nasional</a><a href="populer.html">terpopuler</a><a href="hiburan.html">hiburan</a><a href="film.html">film</a><a href="kartun.html">kartun</a>
+      <div class="navbar-center"><a href="index.html">beranda</a><a href="nasional.html">nasional</a><a href="populer.html">terpopuler</a><a href="hiburan.html">hiburan</a><a href="film.html">film</a><a href="#">kartun</a>
         <div class="dropdown"><a href="#">about us</a>
-          <div class="dropdown-content"><a href="contact.html">kontak</a><a href="redaksi.html">redaksi</a><a href="pedomanberita.html">pedoman berita</a><a href="visimisi.html">visi dan misi</a><a href="faq.html">FAQ</a><a href="disclemer.html">disclaimer</a><a href="pedomanberita.html">pedoman berita</a></div>
+          <div class="dropdown-content"><a href="contact.html">kontak</a><a href="redaksi.html">redaksi</a><a href="pedomanberita.html">pedoman berita</a><a href="visimisi.html">visi dan misi</a><a href="faq.html">FAQ</a><a href="#">disclaimer</a><a href="#">pedoman berita</a></div>
         </div>
       </div>
       <!-- Right side (Search Container)-->
@@ -33,69 +33,17 @@
         </div>
       </div>
     </div>
-    <div class="containered"></div>
-    <script>
-      const cardsData = [
-        {
-          title: "PEMANTAUAN CUACA",
-          imageUrl: "https://storage.googleapis.com/a1aa/image/y7uhfPaM1wQDRK6u4HsP3DU96yFOu1En123VQqoBssrQsd1JA.jpg",
-          alt: "Illustration of a person wearing a mask with pollution elements like factories and cars in the background"
-        },
-        {
-          title: "KONTROL POLUSI",
-          imageUrl: "https://storage.googleapis.com/a1aa/image/NV6fuCoOyu3XACfefGEa1s7T021mi3g6LWwx4ELKBJzAitrOB.jpg",
-          alt: "Illustration of a person pointing to a recycle symbol"
-        },
-        {
-          title: "PENCEGAHAN PERUBAHAN IKLIM",
-          imageUrl: "https://storage.googleapis.com/a1aa/image/Rr7eUW0smaWtOKlIf4AD3kZjrRiTUe9iEVCdjYCOiYeMitrOB.jpg",
-          alt: "Illustration of a person planting a tree"
-        }
-      ];
-      
-      let currentCard = 0;
-      const container = document.querySelector('.containered');
-      
-      cardsData.forEach((data, index) => {
-        const card = document.createElement('div');
-        card.classList.add('carded');
-        card.id = `card${index + 1}`;
-      
-        card.innerHTML = `
-          <div class="carded-title">${data.title}</div>
-          <img src="${data.imageUrl}" alt="${data.alt}" width="300" height="300"/>
-          <div class="navigationed">
-            ${index > 0 ? '<a onclick="prevCard()">←</a>' : ''}
-            ${index < cardsData.length - 1 ? '<a onclick="nextCard()">→</a>' : ''}
-          </div>
-        `;
-        container.appendChild(card);
-      });
-      
-      const cards = document.querySelectorAll(".carded");
-      
-      function showCard(index) {
-        cards.forEach((card, i) => {
-          card.style.display = i === index ? "block" : "none";
-        });
-      }
-      
-      function nextCard() {
-        if (currentCard < cards.length - 1) {
-          currentCard++;
-          showCard(currentCard);
-        }
-      }
-      
-      function prevCard() {
-        if (currentCard > 0) {
-          currentCard--;
-          showCard(currentCard);
-        }
-      }
-      
-      showCard(currentCard);
-    </script>
+    <div class="container">
+      <div class="card" id="card1">
+        <div class="card-title">PEMANTAUAN CUACA</div><img src="https://storage.googleapis.com/a1aa/image/y7uhfPaM1wQDRK6u4HsP3DU96yFOu1En123VQqoBssrQsd1JA.jpg" alt="Illustration of a person wearing a mask with pollution elements like factories and cars in the background" width="600" height="300"/>
+      </div>
+      <div class="card" id="card2">
+        <div class="card-title">KONTROL POLUSI</div><img src="https://storage.googleapis.com/a1aa/image/NV6fuCoOyu3XACfefGEa1s7T021mi3g6LWwx4ELKBJzAitrOB.jpg" alt="Illustration of a person pointing to a recycle symbol" width="600" height="300"/>
+      </div>
+      <div class="card" id="card3">
+        <div class="card-title">PENCEGAHAN PERUBAHAN IKLIM</div><img src="https://storage.googleapis.com/a1aa/image/Rr7eUW0smaWtOKlIf4AD3kZjrRiTUe9iEVCdjYCOiYeMitrOB.jpg" alt="Illustration of a person planting a tree" width="600" height="300"/>
+      </div>
+    </div>
     <div class="footer">
       <div class="left"><img alt="SaturNews logo" src="logo.png"/>
         <div class="social-icons"><a href="#"> <i class="fab fa-instagram"></i>@SaturNews</a><a href="#"> <i class="fab fa-facebook"></i>@SaturNews</a><a href="#"> <i class="fab fa-twitter"></i>@SaturNews</a></div>

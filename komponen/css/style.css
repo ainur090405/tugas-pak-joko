@@ -312,6 +312,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 330px;
 }
 
 /* Content Layout */
@@ -463,6 +464,7 @@ body {
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 200px;
 }
 
 /* Header */
@@ -570,7 +572,6 @@ body {
   height: 100vh;
   margin: 0;
 }
-
 /* Main Container */
 .container-profile {
   background-color: white;
@@ -582,8 +583,9 @@ body {
   flex-direction: column;
   align-items: center;
   margin-inline: 200px;
+  margin-top: 150px;
+  margin-left: 506px;
 }
-
 /* Header Section */
 .header-profile {
   display: flex;
@@ -681,6 +683,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 300px;
 }
 
 /* Panel Styling */
@@ -916,84 +919,65 @@ body.kes {
 
 /*audio */
 
-.containeraudio {
+.heading {
   text-align: center;
-  margin-top: 20px;
-}
-
-.title {
-  font-size: 36px;
+  font-size: 2rem;
   font-weight: bold;
-  color: #5a1e1e;
-  margin-bottom: 40px;
+  color: #7F1D1D;
+  margin-bottom: 2rem;
 }
 
-.cardaudio {
-  background-color: white;
-  border-radius: 10px;
+.card {
+  background-color: white; 
+  border-radius: 4.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  margin: 20px;
-  display: inline-block;
-  vertical-align: top;
+  overflow: hidden;
+  border: 2px solid transparent;
 }
 
-.cardau img {
+.image {
   width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  height: 12rem;
+  object-fit: cover;
 }
 
-.card-contentau {
-  padding: 15px;
-  text-align: left;
-}
-
-.card-content h3 {
-  margin: 10px 0;
-  font-size: 18px;
-}
-
-.card-content p {
-  margin: 5px 0;
-  color: #555;
-}
-
-.card-content .spotify {
-  color: #1DB954;
-  display: flex;
-  align-items: center;
-}
-
-.card-content .spotify i {
-  margin-right: 5px;
-}
-
-.viewau-button {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.view-button {
   background-color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: black;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
 }
 
-.card-image {
-  position: relative;
+.song-title {
+  font-size: 1.125rem;
+  font-weight: 600;
 }
 
+.song-info {
+  color: #718096;
+}
+
+.spotify-text {
+  margin-left: 0.5rem;
+  color: #10B981;
+}
+
+.info-icon {
+  color: #A0AEC0;
+  margin-left: auto;
+}
 /*pedoman*/
 .container {
-  background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   max-width: 800px;
   width: 100%;
+  margin-left: 506px;
+  margin-top: 300px;
 }
 
 h1 {
@@ -1089,7 +1073,9 @@ display: grid;
 grid-template-columns: 1fr 1fr;
 row-gap: 42px;
 column-gap: 18rem;
-margin: 20px 35px 45px 45px; } 
+margin: 20px 35px 45px 45px; 
+margin-top: 280px;} 
+
 .cardbr {
   overflow: hidden;
   border-radius: 10px;

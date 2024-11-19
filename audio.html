@@ -1,0 +1,81 @@
+
+<!-- Navbar Mixin-->
+<!-- Footer Container Mixin-->
+<!-- Left Section of the Footer with Logo and Social Icons-->
+<!-- Right Section of the Footer with Links-->
+<!-- Mixin renamed to menuHome-->
+<!-- Home Button Mixin-->
+<!-- Contact Component Mixin-->
+<!-- Profile Component Mixin--><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="komponen/css/style.css">
+  </head>
+  <body>
+    <div class="navbar">
+      <!-- Left side (Logo)-->
+      <div class="navbar-left"><a href="#">Saturn News</a></div>
+      <!-- Center (Navigation Links)-->
+      <div class="navbar-center"><a href="index.html">beranda</a><a href="nasional.html">nasional</a><a href="populer.html">terpopuler</a><a href="hiburan.html">hiburan</a><a href="film.html">film</a><a href="#">kartun</a>
+        <div class="dropdown"><a href="#">about us</a>
+          <div class="dropdown-content"><a href="contact.html">kontak</a><a href="redaksi.html">redaksi</a><a href="pedomanberita.html">pedoman berita</a><a href="visimisi.html">visi dan misi</a><a href="faq.html">FAQ</a><a href="#">disclaimer</a><a href="#">pedoman berita</a></div>
+        </div>
+      </div>
+      <!-- Right side (Search Container)-->
+      <div class="navbar-right">
+        <div class="search-container">
+          <input type="text" placeholder="Cari..."/>
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md">
+      <grid-cols-2 class="gap-8"></grid-cols-2>
+    </div>
+    <div class="card"><img class="card-img" src="https://storage.googleapis.com/a1aa/image/ie7KosyozpUNIyLP4RJKnRtwWnrANFnyR9OztNOwa6CCcG4JA.jpg" alt="Image of Amin Paling Serius"/>
+      <div class="p-4">
+        <button class="view-button">View</button>
+        <h2 class="text-lg font-semibold">Amin Paling Serius</h2>
+        <p class="text-gray-600">Song · Sal Priadi, Nadin Amizah · 2019</p>
+        <div class="flex items-center mt-2"><i class="fab fa-spotify text-green-500"></i><span class="ml-2 text-green-500">Spotify</span><i class="fas fa-info-circle text-gray-400 ml-auto"></i></div>
+      </div>
+    </div>
+    <div class="card"><img class="card-img" src="https://storage.googleapis.com/a1aa/image/yOb8u09AjRbjLlx3sypLNgyypNuiAFwf46qropeor6eKwZgnA.jpg" alt="Image of Runth"/>
+      <div class="p-4">
+        <button class="view-button">View</button>
+        <h2 class="text-lg font-semibold">Runth</h2>
+        <p class="text-gray-600">Song · 2019</p>
+        <div class="flex items-center mt-2"><i class="fab fa-spotify text-green-500"></i><span class="ml-2 text-green-500">Spotify</span><i class="fas fa-info-circle text-gray-400 ml-auto"></i></div>
+      </div>
+    </div>
+    <div class="card"><img class="card-img" src="https://storage.googleapis.com/a1aa/image/6m4uKS1EW74BCRlfMwx1nhYBFEOuftQatdFSsjylqIzC4MwTA.jpg" alt="Image of Resah"/>
+      <div class="p-4">
+        <button class="view-button">View</button>
+        <h2 class="text-lg font-semibold">Resah</h2>
+        <p class="text-gray-600">Song · Payung Teduh · 2014</p>
+        <div class="flex items-center mt-2"><i class="fab fa-spotify text-green-500"></i><span class="ml-2 text-green-500">Spotify</span><i class="fas fa-info-circle text-gray-400 ml-auto"></i></div>
+      </div>
+    </div>
+    <div class="card"><img class="card-img" src="https://storage.googleapis.com/a1aa/image/2rDrhydKMr4wAtIuU40b0T5F3agWEJepbx6oERbU4uuDcG4JA.jpg" alt="Image of Sampai Jadi Debu"/>
+      <div class="p-4">
+        <button class="view-button">View</button>
+        <h2 class="text-lg font-semibold">Sampai Jadi Debu (Menampilkan Gardika Gigih)</h2>
+        <p class="text-gray-600">Song · Banda Neira · 2016</p>
+        <div class="flex items-center mt-2"><i class="fab fa-spotify text-green-500"></i><span class="ml-2 text-green-500">Spotify</span><i class="fas fa-info-circle text-gray-400 ml-auto"></i></div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="left"><img alt="SaturNews logo" src="logo.png"/>
+        <div class="social-icons"><a href="#"> <i class="fab fa-instagram"></i>@SaturNews</a><a href="#"> <i class="fab fa-facebook"></i>@SaturNews</a><a href="#"> <i class="fab fa-twitter"></i>@SaturNews</a></div>
+      </div>
+      <div class="right">
+        <p>PT. SaturNews</p>
+        <p><a href="#">#Nasional</a><a href="#">#Hiburan</a><a href="#">#Live</a><a href="#">#Video</a><a href="#">#Komik</a><a href="#">#Terpopuler</a><a href="#">#Film</a><a href="#">#Kesehatan</a><a href="#">#Audio</a></p>
+      </div>
+    </div>
+  </body>
+</html>

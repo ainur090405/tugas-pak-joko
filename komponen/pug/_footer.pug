@@ -1,0 +1,35 @@
+// Footer Container Mixin
+mixin footer()
+  .footer
+    +footerLeft()
+    +footerRight()
+
+// Left Section of the Footer with Logo and Social Icons
+mixin footerLeft()
+  .left
+    img(alt="SaturNews logo", src="/footer/foto/saturnus.png")
+    .social-icons
+      a(href="#") 
+        i.fab.fa-instagram
+        | @SaturNews
+      a(href="#") 
+        i.fab.fa-facebook
+        | @SaturNews
+      a(href="#") 
+        i.fab.fa-twitter
+        | @SaturNews
+
+// Right Section of the Footer with Links
+mixin footerRight()
+  .right
+    p PT. SaturNews
+    p
+      a(href="#") #Nasional
+      a(href="#") #Hiburan
+      a(href="#") #Live
+      a(href="#") #Video
+      a(href="#") #Komik
+      a(href="#") #Terpopuler
+      a(href="#") #Film
+      a(href="#") #Kesehatan
+      a(href="#") #Audio

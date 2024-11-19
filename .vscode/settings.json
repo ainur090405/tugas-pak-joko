@@ -1,5 +1,0 @@
-{
-    "compile-hero.disable-compile-files-on-did-save-code": false,
-    "pug2html.extension.pretty.enable": true,
-    "liveServer.settings.port": 5501
-}

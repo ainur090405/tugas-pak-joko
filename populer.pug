@@ -1,6 +1,10 @@
 extends komponen/pug/_template.pug
 
 block content
+ +CircleImageContainer([
+    { src: 'https://storage.googleapis.com/a1aa/image/YZ8xb2yG2GbsMZYwsemdtH7YIwxydRfbolxPhojxRdGcLeWnA.jpg', alt: 'Illustration of a news reporter with a microphone', width: 150, height: 150 },
+    { src: 'https://storage.googleapis.com/a1aa/image/3qiBccBWwNJeJ6mPnui6lvjdU7LHQk5lePBzgGLIUdxeW8WnA.jpg', alt: 'Illustration of a person recording a podcast', width: 150, height: 150 },
+    { src: 'https://storage.googleapis.com/a1aa/image/EqqBGyztkRKJLRfuGMbo5COW7oBfH0itgtDVVvsBTd3hLeWnA.jpg', alt: 'Illustration of a person broadcasting news online', width: 150, height: 150 }
  .div.container-terpopuler
   .div.content-terpopuler
     h1 BERITA TERPOPULER
@@ -14,9 +18,4 @@ block content
       width="300", 
       height="200"
     )
-
-  +CircleImageContainer([
-    { src: 'https://storage.googleapis.com/a1aa/image/YZ8xb2yG2GbsMZYwsemdtH7YIwxydRfbolxPhojxRdGcLeWnA.jpg', alt: 'Illustration of a news reporter with a microphone', width: 150, height: 150 },
-    { src: 'https://storage.googleapis.com/a1aa/image/3qiBccBWwNJeJ6mPnui6lvjdU7LHQk5lePBzgGLIUdxeW8WnA.jpg', alt: 'Illustration of a person recording a podcast', width: 150, height: 150 },
-    { src: 'https://storage.googleapis.com/a1aa/image/EqqBGyztkRKJLRfuGMbo5COW7oBfH0itgtDVVvsBTd3hLeWnA.jpg', alt: 'Illustration of a person broadcasting news online', width: 150, height: 150 }
 ])

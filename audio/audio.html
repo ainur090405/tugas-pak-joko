@@ -1,61 +1,77 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEDANG TRENDING</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="audio.css">
+    <title>Trending Songs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="audio.css" />
 </head>
-<body>
-    <div class="container">
-        <div class="title">SEDANG TRENDING</div>
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto p-4">
+        <h1 class="text-center text-4xl font-bold text-red-900 mb-8 title">
+            SEDANG TRENDING
+        </h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-        <script>
-            const cards = [
-                {
-                    src: "https://storage.googleapis.com/a1aa/image/tmn5fwJSyq3iN6kvIceNefKCUeq0YqeBTznn1qHob6SeRsH4JA.jpg",
-                    alt: "Image of Amin Paling Serius",
-                    title: "Amin Paling Serius",
-                    description: "Song · Sal Priadi, Nadin Amizah · 2019"
-                },
-                {
-                    src: "https://storage.googleapis.com/a1aa/image/gGBdB833koqGGBVuMdcJk6U2EJH2QGBR6KUv51fv80dQsH4JA.jpg",
-                    alt: "Image of Runtuh",
-                    title: "Runtuh",
-                    description: "Song · Spotify"
-                },
-                {
-                    src: "https://storage.googleapis.com/a1aa/image/ZgCf8GkDNTUbf0UDXo0CxiecjGEpayPThlpA7qSe2jq4h9APB.jpg",
-                    alt: "Image of Resah",
-                    title: "Resah",
-                    description: "Song · Payung Teduh · 2014"
-                },
-                {
-                    src: "https://storage.googleapis.com/a1aa/image/7GgfibzeIecjQoQB15YdPrG26any1vYwEjR82UwQxzRExeAPB.jpg",
-                    alt: "Image of Sampai Jadi Debu (Menampilkan Gardika Gigih)",
-                    title: "Sampai Jadi Debu (Menampilkan Gardika Gigih)",
-                    description: "Song · Banda Neira · 2016"
-                }
-            ];
-
-            cards.forEach(card => {
-                document.write(`
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="${card.src}" alt="${card.alt}" width="300" height="150">
-                            <button class="view-button">View</button>
-                        </div>
-                        <div class="card-content">
-                            <h3>${card.title}</h3>
-                            <p>${card.description}</p>
-                            <div class="spotify"><i class="fab fa-spotify"></i> Spotify</div>
-                        </div>
+            <div class="card">
+                <img src="https://storage.googleapis.com/a1aa/image/ie7KosyozpUNIyLP4RJKnRtwWnrANFnyR9OztNOwa6CCcG4JA.jpg" alt="Image of Amin Paling Serius" class="card-img" />
+                <div class="p-4">
+                    <button class="view-button">View</button>
+                    <h2 class="text-lg font-semibold">Amin Paling Serius</h2>
+                    <p class="text-gray-600">Song · Sal Priadi, Nadin Amizah · 2019</p>
+                    <div class="flex items-center mt-2">
+                        <i class="fab fa-spotify text-green-500"></i>
+                        <span class="ml-2 text-green-500">Spotify</span>
+                        <i class="fas fa-info-circle text-gray-400 ml-auto"></i>
                     </div>
-                `);
-            });
-        </script>
+                </div>
+            </div>
+            <!-- Song 2 -->
+            <div class="card">
+                <img src="https://storage.googleapis.com/a1aa/image/yOb8u09AjRbjLlx3sypLNgyypNuiAFwf46qropeor6eKwZgnA.jpg" alt="Image of Runth" class="card-img" />
+                <div class="p-4">
+                    <button class="view-button">View</button>
+                    <h2 class="text-lg font-semibold">Runth</h2>
+                    <p class="text-gray-600">Song · 2019</p>
+                    <div class="flex items-center mt-2">
+                        <i class="fab fa-spotify text-green-500"></i>
+                        <span class="ml-2 text-green-500">Spotify</span>
+                        <i class="fas fa-info-circle text-gray-400 ml-auto"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Song 3 -->
+            <div class="card ">
+                <img src="https://storage.googleapis.com/a1aa/image/6m4uKS1EW74BCRlfMwx1nhYBFEOuftQatdFSsjylqIzC4MwTA.jpg" alt="Image of Resah" class="card-img" />
+                <div class="p-4">
+                    <button class="view-button">View</button>
+                    <h2 class="text-lg font-semibold">Resah</h2>
+                    <p class="text-gray-600">Song · Payung Teduh · 2014</p>
+                    <div class="flex items-center mt-2">
+                        <i class="fab fa-spotify text-green-500"></i>
+                        <span class="ml-2 text-green-500">Spotify</span>
+                        <i class="fas fa-info-circle text-gray-400 ml-auto"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Song 4 -->
+            <div class="card">
+                <img src="https://storage.googleapis.com/a1aa/image/2rDrhydKMr4wAtIuU40b0T5F3agWEJepbx6oERbU4uuDcG4JA.jpg" alt="Image of Sampai Jadi Debu" class="card-img" />
+                <div class="p-4">
+                    <button class="view-button">View</button>
+                    <h2 class="text-lg font-semibold">Sampai Jadi Debu (Menampilkan Gardika Gigih)</h2>
+                    <p class="text-gray-600">Song · Banda Neira · 2016</p>
+                    <div class="flex items-center mt-2">
+                        <i class="fab fa-spotify text-green-500"></i>
+                        <span class="ml-2 text-green-500">Spotify</span>
+                        <i class="fas fa-info-circle text-gray-400 ml-auto"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
-

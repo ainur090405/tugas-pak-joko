@@ -19,7 +19,7 @@
           <a onclick="nextCard()">→</a>
         </div>
       </div>
-    
+
       <div class="card" id="card2">
         <div class="card-title">PENGELOLAAN SAMPAH</div>
         <img
@@ -33,7 +33,7 @@
           <a onclick="nextCard()">→</a>
         </div>
       </div>
-    
+
       <div class="card" id="card3">
         <div class="card-title">PENANAMAN POHON</div>
         <img
@@ -48,29 +48,32 @@
         </div>
       </div>
     </div>
-    
+
     <script>
       let currentCard = 0;
       const cards = document.querySelectorAll(".card");
-    
+
       function showCard(index) {
         cards.forEach((card, i) => {
           card.style.display = i === index ? "block" : "none";
         });
       }
-    
+
       function nextCard() {
-        currentCard = (currentCard + 1) % cards.length;
-        showCard(currentCard);
+        if (currentCard < cards.length - 1) {
+          currentCard++;
+          showCard(currentCard);
+        }
       }
-    
+
       function prevCard() {
-        currentCard = (currentCard - 1 + cards.length) % cards.length;
-        showCard(currentCard);
+        if (currentCard > 0) {
+          currentCard--;
+          showCard(currentCard);
+        }
       }
-    
+
       showCard(currentCard);
     </script>
-    
   </body>
 </html>

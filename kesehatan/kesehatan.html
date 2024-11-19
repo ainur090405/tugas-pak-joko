@@ -7,51 +7,20 @@
     <link rel="stylesheet" href="kesehatan.css">
 </head>
 <body>
-    <div class="card-container" id="cardContainer"></div>
-
-<script>
-  const cardData = [
-    {
-      link: "edukasi1.html",
-      imgSrc: "https://storage.googleapis.com/a1aa/image/hSxUoJiDdFq6LVdelJYc9aEvyxF8mmLdqtEsBSS7cLeiniqTA.jpg",
-      altText: "Illustration of a blood pressure monitor on an arm with a heart symbol",
-    },
-    {
-      link: "edukasi2.html",
-      imgSrc: "https://storage.googleapis.com/a1aa/image/iIydQyd6KCI9JZS2eSkZYvNlg0Msk6ispPw69SFfOfsNPFVnA.jpg",
-      altText: "Illustration of a nose with an oxygen symbol",
-    },
-    {
-      link: "edukasi3.html",
-      imgSrc: "https://storage.googleapis.com/a1aa/image/Hh9J8fW0Id2udiRBXKGf8yOmtCClllh5df8e5TwAlf3j8UUdC.jpg",
-      altText: "Illustration of feet on a weighing scale",
-    },
-    {
-      link: "edukasi4.html",
-      imgSrc: "https://storage.googleapis.com/a1aa/image/sr1QakpIp36MEhnMzkXNiw1kzCISbcsg4UEa3i1O8Ra5po6E.jpg",
-      altText: "Illustration of a thermometer with a degree symbol",
-    },
-  ];
-
-  const container = document.getElementById("cardContainer");
-
-  cardData.forEach((card, index) => {
-    const cardDiv = document.createElement("div");
-    cardDiv.className = `card card-${index + 1}`;
-
-    const link = document.createElement("a");
-    link.href = card.link;
-
-    const img = document.createElement("img");
-    img.src = card.imgSrc;
-    img.alt = card.altText;
-
-    link.appendChild(img);
-    cardDiv.appendChild(link);
-    container.appendChild(cardDiv);
-  });
-</script>
-
+    <div class="card-container">
+        <div class="card card-1">
+            <img alt="Illustration of a blood pressure monitor on an arm with a heart symbol" src="https://storage.googleapis.com/a1aa/image/hSxUoJiDdFq6LVdelJYc9aEvyxF8mmLdqtEsBSS7cLeiniqTA.jpg"/>
+        </div>
+        <div class="card card-2">
+            <img alt="Illustration of a nose with an oxygen symbol" src="https://storage.googleapis.com/a1aa/image/iIydQyd6KCI9JZS2eSkZYvNlg0Msk6ispPw69SFfOfsNPFVnA.jpg"/>
+        </div>
+        <div class="card card-3">
+            <img alt="Illustration of feet on a weighing scale" src="https://storage.googleapis.com/a1aa/image/Hh9J8fW0Id2udiRBXKGf8yOmtCClllh5df8e5TwAlf3j8UUdC.jpg"/>
+        </div>
+        <div class="card card-4">
+            <img alt="Illustration of a thermometer with a degree symbol" src="https://storage.googleapis.com/a1aa/image/sr1QakpIp36MEhnMzkXNiw1kzCISbcsg4UEa3i1O8Ra5po6E.jpg"/>
+        </div>
     </div>
+    
 </body>
 </html>

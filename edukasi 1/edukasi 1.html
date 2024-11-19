@@ -5,96 +5,75 @@
     <link rel="stylesheet" href="edukasi 1.css"> 
   </head>
   <body>
-    <div class="container" id="cardContainer"></div>
+    <div class="container">
+      <div class="card" id="card1">
+        <div class="card-title">HINDARI ROKOK DAN ALKOHOL</div>
+        <img
+          src="https://storage.googleapis.com/a1aa/image/XG4ps1KgU0LhCBVAMaAbj4pBaY7Hq5UiJetcdye0Wfme0rrOB.jpg"
+          alt="Illustration of a person wearing a mask with pollution elements like factories and cars in the background"
+          width="600"
+          height="300"
+        />
+        <div class="navigation">
+          <span></span>
+          <a onclick="nextCard()">→</a>
+        </div>
+      </div>
+
+      <div class="card" id="card2">
+        <div class="card-title">OLAHRAGA TERATUR</div>
+        <img
+          src="https://storage.googleapis.com/a1aa/image/qW6uCTfFJvxyZi4xOy8S9JVtwuNvU1aRG1UW0Hbvj1bne6qTA.jpg"
+          alt="Illustration of a person pointing to a recycle symbol"
+          width="600"
+          height="300"
+        />
+        <div class="navigation">
+          <a onclick="prevCard()">←</a>
+          <a onclick="nextCard()">→</a>
+        </div>
+      </div>
+
+      <div class="card" id="card3">
+        <div class="card-title">HINDARI STRES</div>
+        <img
+          src="https://storage.googleapis.com/a1aa/image/szgzqiQCuELZDNmqWEyRnuyXJF0k3A5scuxkpyUB3e0oe6qTA.jpg"
+          alt="Illustration of a person planting a tree"
+          width="600"
+          height="300"
+        />
+        <div class="navigation">
+          <a onclick="prevCard()">←</a>
+          <span></span>
+        </div>
+      </div>
+    </div>
 
     <script>
-      const cardData = [
-        {
-          title: "HINDARI ROKOK DAN ALKOHOL",
-          imgSrc: "https://storage.googleapis.com/a1aa/image/XG4ps1KgU0LhCBVAMaAbj4pBaY7Hq5UiJetcdye0Wfme0rrOB.jpg",
-          altText: "Illustration of a person wearing a mask with pollution elements like factories and cars in the background",
-        },
-        {
-          title: "OLAHRAGA TERATUR",
-          imgSrc: "https://storage.googleapis.com/a1aa/image/qW6uCTfFJvxyZi4xOy8S9JVtwuNvU1aRG1UW0Hbvj1bne6qTA.jpg",
-          altText: "Illustration of a person pointing to a recycle symbol",
-        },
-        {
-          title: "HINDARI STRES",
-          imgSrc: "https://storage.googleapis.com/a1aa/image/szgzqiQCuELZDNmqWEyRnuyXJF0k3A5scuxkpyUB3e0oe6qTA.jpg",
-          altText: "Illustration of a person planting a tree",
-        }
-      ];
-    
-      const container = document.getElementById("cardContainer");
-    
-      cardData.forEach((card, index) => {
-        const cardDiv = document.createElement("div");
-        cardDiv.className = "card";
-        cardDiv.id = `card${index + 1}`;
-    
-        const titleDiv = document.createElement("div");
-        titleDiv.className = "card-title";
-        titleDiv.textContent = card.title;
-    
-        const img = document.createElement("img");
-        img.src = card.imgSrc;
-        img.alt = card.altText;
-        img.width = 600;
-        img.height = 300;
-    
-        const navDiv = document.createElement("div");
-        navDiv.className = "navigation";
-    
-        if (index > 0) {
-          const prevLink = document.createElement("a");
-          prevLink.textContent = "←";
-          prevLink.onclick = prevCard;
-          navDiv.appendChild(prevLink);
-        } else {
-          navDiv.appendChild(document.createElement("span"));
-        }
-    
-        if (index < cardData.length - 1) {
-          const nextLink = document.createElement("a");
-          nextLink.textContent = "→";
-          nextLink.onclick = nextCard;
-          navDiv.appendChild(nextLink);
-        } else {
-          navDiv.appendChild(document.createElement("span"));
-        }
-    
-        cardDiv.appendChild(titleDiv);
-        cardDiv.appendChild(img);
-        cardDiv.appendChild(navDiv);
-        container.appendChild(cardDiv);
-      });
-    
       let currentCard = 0;
       const cards = document.querySelectorAll(".card");
-    
+
       function showCard(index) {
         cards.forEach((card, i) => {
           card.style.display = i === index ? "block" : "none";
         });
       }
-    
+
       function nextCard() {
         if (currentCard < cards.length - 1) {
           currentCard++;
           showCard(currentCard);
         }
       }
-    
+
       function prevCard() {
         if (currentCard > 0) {
           currentCard--;
           showCard(currentCard);
         }
       }
-    
+
       showCard(currentCard);
     </script>
-    
   </body>
 </html>

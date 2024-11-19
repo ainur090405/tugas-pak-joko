@@ -412,6 +412,7 @@ body {
   width: 300px;
   height: auto;
   margin-bottom: 20px;
+  margin-left: -205px;
 }
 
 /* Circle Images Section */
@@ -419,7 +420,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 365px;
+  margin-left: -800px;
 }
 
 .circle-container-terpopuler {
@@ -429,6 +431,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  mar
 }
 
 .circle-terpopuler {
@@ -976,7 +979,7 @@ body.kes {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   max-width: 800px;
   width: 100%;
-  margin-left: 506px;
+  margin-left: 365px;
   margin-top: 300px;
 }
 

@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TV Channels</title>
     <link rel="stylesheet" href="../berita.css">
   </head>
   <body>
-    <div class="container">
-      <div class="card"><img alt="tvOne logo" height="200" src="../Foto/image.ainur.png" width="500"></div>
-      <div class="card"><img alt="Metro TV logo" height="200" src="../Foto/image copy.png" width="500"></div>
-      <div class="card"><img alt="Kompas TV logo" height="200" src="../Foto/image.png" width="500"></div>
-      <div class="card"><img alt="iNews TV logo" height="200" src="../Foto/image copy 3.png" width="500"></div>
-    </div>
+    <div class="container" id="container"></div>
+    <script>
+      const tvChannels = [
+          { alt: "tvOne logo", src: "../Foto/image.ainur.png" },
+          { alt: "Metro TV logo", src: "../Foto/image copy.png" },
+          { alt: "Kompas TV logo", src: "../Foto/image.png" },
+          { alt: "iNews TV logo", src: "../Foto/image copy 3.png" }
+      ];
+      
+      const container = document.getElementById("container");
+      
+      tvChannels.forEach(channel => {
+          const card = document.createElement("div");
+          card.className = "card";
+          
+          const img = document.createElement("img");
+          img.alt = channel.alt;
+          img.src = channel.src;
+      
+          card.appendChild(img);
+          container.appendChild(card);
+      });
+    </script>
   </body>
 </html>

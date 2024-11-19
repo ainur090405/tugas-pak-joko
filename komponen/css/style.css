@@ -969,8 +969,7 @@ body.kes {
   margin-right: 5px;
 }
 
-.view-button {
-  position: absolute;
+.viewau-button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -1074,4 +1073,37 @@ ul li {
   width: 260px;
   height: auto;
   margin: 65px;
+}
+/* berita */
+body.br {
+  background-color: #EFF3F3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.containerbr {
+display: grid;
+grid-template-columns: 1fr 1fr;
+row-gap: 42px;
+column-gap: 18rem;
+margin: 20px 35px 45px 45px; } 
+.cardbr {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cardbr img {
+  width: 475px;
+  height: 180px;
+  transition: transform 0.3s ease;
+}
+.cardbr:hover img {
+  transform: scale(1.05); 
+}
+.cardbr:active img {
+  transform: scale(0.95);
 }

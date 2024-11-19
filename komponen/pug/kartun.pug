@@ -1,30 +1,4 @@
-mixin kartun()
-    .gallery
-      //- Data array yang berisi detail gambar dan fungsi JavaScript untuk menampilkan galeri
-      script.
-        const galleryItems = [
-          {
-            src: "https://storage.googleapis.com/a1aa/image/Nit7FaY8iKrvFJTm8WzET7mcHhdscgbgOyO4w28JU6b5V06E.jpg",
-            alt: "Cover of 'The Adventures of Tintin: The Secret of the Unicorn' showing Tintin and a unicorn in front of a castle.",
-            title: "TINTIN"
-          },
-          {
-            src: "https://storage.googleapis.com/a1aa/image/JRvIN84lmiaoOFb8Zl5SetNrnbBGKYFdmU3k7e4qGZUkXRrTA.jpg",
-            alt: "Cover of 'Coco' showing a young boy with a red outfit and a small animal.",
-            title: "COCO"
-          },
-          {
-            src: "https://storage.googleapis.com/a1aa/image/sJ87cIwAZeyVM6jX2Jh4tnfEXx4rVSCty20WqnqKtXumXRrTA.jpg",
-            alt: "Cover of 'Missing Link' showing a character in a green outfit in a mystical environment.",
-            title: "MISSING LINK"
-          }
-        ];
-
-        galleryItems.forEach(item => {
-          document.write(`
-            <div class="gallery-item">
-              <img src="${item.src}" alt="${item.alt}" width="300" height="400"/>
-              <p>${item.title}</p>
-            </div>
-          `);
-        });
+mixin GalleryItem(imageSrc, altText, title)
+  .gallery-item
+    img(src=imageSrc, alt=altText, width="300", height="400")
+    p= title

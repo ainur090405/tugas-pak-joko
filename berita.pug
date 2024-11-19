@@ -1,5 +1,6 @@
 extends komponen/pug/_template.pug
 
 block content
-  +berita()
-  
+  .container
+    each item in br
+        +berita(item.iurl, item.alt)

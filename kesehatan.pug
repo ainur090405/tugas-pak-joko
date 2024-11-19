@@ -1,4 +1,6 @@
 extends komponen/pug/_template.pug
 
 block content
-   +kesehatan()
+  .card-container
+    each item in kes
+        +kes(item.imageUrl, item.altText)

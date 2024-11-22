@@ -1,4 +1,4 @@
-mixin Card(id, title, imgSrc, imgAlt)
-  .card(id=id)
-    .card-title #{title}
-    img(src=imgSrc, alt=imgAlt, width="600", height="300")
+mixin Card1(cardId, title, imageUrl, altText)
+  .card(id=cardId)
+    h3.card-title #{title}
+    img.card-image(src=imageUrl, alt=altText)

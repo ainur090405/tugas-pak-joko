@@ -1,3 +1,4 @@
-mixin Card(imageSrc, altText)
+mixin Card(image, altText)
   .card
-    img(src=imageSrc, alt=altText)
+    img(src=image, alt=altText, width="200", height="100")
+    .card-title #{altText}

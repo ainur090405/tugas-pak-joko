@@ -1,4 +1,4 @@
-mixin GalleryItem(src, alt, title)
+mixin GalleryItem(image, altText, title)
   .gallery-item
-    img(src=src, alt=alt, width="300", height="400")
-    p #{title}
+    img(src=image, alt=altText, width="200", height="300")
+    h4 #{title}

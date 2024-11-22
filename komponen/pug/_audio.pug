@@ -1,11 +1,8 @@
-mixin SongCard(imgSrc, altText, songTitle, songInfo, songYear, songLink)
-  .card
-    img(src=imgSrc, alt=altText, class="card-img")
-    .p-4
-      button.view-button View
-      h2.text-lg.font-semibold= songTitle
-      p.text-gray-600= songInfo + " · " + songYear
-      .flex.items-center.mt-2
-        i.fab.fa-spotify.text-green-500
-        span.ml-2.text-green-500 Spotify
-        i.fas.fa-info-circle.text-gray-400.ml-auto
+mixin SongCard(image, altText, title, description, year, link)
+  .song-card
+    a(href=link)
+      img(src=image, alt=altText, class="song-image")
+      .song-info
+        h3.title #{title}
+        p.description #{description}
+        span.year #{year}

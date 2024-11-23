@@ -1,23 +1,6 @@
 extends komponen/pug/_template.pug
 
 block content
-   .container
-      +Card2(
-    "card1",
-    "KURANGI POLUSI",
-    "https://storage.googleapis.com/a1aa/image/qtZiY7Z02hobIxeNx04PJIWyyuexRxfDBEoYgdirVj1lb1VnA.jpg",
-    "Illustration of a person wearing a mask with pollution elements like factories and cars in the background"
-  )
-  
-      +Card2(
-    "card2",
-    "PENGELOLAAN SAMPAH",
-    "https://storage.googleapis.com/a1aa/image/BWVkUzTPYeUfqUKHMaMi5RbsoCDKIf7r4MWlrbnnbe4X3qrOB.jpg",
-    "Illustration of a person pointing to a recycle symbol"
-  )
-      +Card2(
-    "card3",
-    "PENANAMAN POHON",
-    "https://storage.googleapis.com/a1aa/image/6aJIuefw9EhfpIn8fKa1EGS7ejwAsjn5XXhVGT139AhmuVXdC.jpg",
-    "Illustration of a person planting a tree"
-  )
+  .container
+     each card in [{cardId: "card1",title: "KURANGI POLUSI",imageUrl: "https://storage.googleapis.com/a1aa/image/qtZiY7Z02hobIxeNx04PJIWyyuexRxfDBEoYgdirVj1lb1VnA.jpg",altText: "Illustration of a person wearing a mask with pollution elements like factories and cars in the background"},{cardId: "card2",title: "PENGELOLAAN SAMPAH",imageUrl: "https://storage.googleapis.com/a1aa/image/BWVkUzTPYeUfqUKHMaMi5RbsoCDKIf7r4MWlrbnnbe4X3qrOB.jpg",altText: "Illustration of a person pointing to a recycle symbol"},{cardId: "card3",title: "PENANAMAN POHON",imageUrl: "https://storage.googleapis.com/a1aa/image/6aJIuefw9EhfpIn8fKa1EGS7ejwAsjn5XXhVGT139AhmuVXdC.jpg",altText: "Illustration of a person planting a tree"}]
+        +Card2(card.cardId, card.title, card.imageUrl, card.altText)

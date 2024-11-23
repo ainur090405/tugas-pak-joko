@@ -1,8 +1,3 @@
-mixin Card(src, alt)
-  .card
-    img(src=src, alt=alt)
-
 mixin CardContainer(cards)
   .card-container
-    each card in cards
-      +Card(card.src, card.alt)
+      

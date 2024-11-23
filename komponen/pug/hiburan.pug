@@ -1,5 +1,3 @@
-mixin CircleImageContainer(images)
-  .circle-images-terpopuler
-    .circle-container-terpopuler
-      each image in images
-        +CircleImage(image.src, image.alt, image.width, image.height)
+mixin CircleImage(src, alt, width, height)
+  .circle-image
+    img(src=src, alt=alt, width=width, height=height)

@@ -15,8 +15,6 @@ block content
       height="200"
     )
 
- +CircleImageContainer([
-  { src: 'https://foto.kontan.co.id/IOpWwTcT1n6-rqWVE_FSKmRe2Pk=/smart/2023/04/04/1091846403p.jpg', alt: 'Illustration of a news reporter with a microphone', width: 150, height: 150 },
-  { src: 'https://storage.googleapis.com/a1aa/image/3qiBccBWwNJeJ6mPnui6lvjdU7LHQk5lePBzgGLIUdxeW8WnA.jpg', alt: 'Illustration of a person recording a podcast', width: 150, height: 150 },
-  { src: 'https://storage.googleapis.com/a1aa/image/EqqBGyztkRKJLRfuGMbo5COW7oBfH0itgtDVVvsBTd3hLeWnA.jpg', alt: 'Illustration of a person broadcasting news online', width: 150, height: 150 }
-])
+  .circle-image-container
+    each image in [{ src: 'https://foto.kontan.co.id/IOpWwTcT1n6-rqWVE_FSKmRe2Pk=/smart/2023/04/04/1091846403p.jpg', alt: 'Illustration of a news reporter with a microphone', width: 150, height: 150 },{ src: 'https://storage.googleapis.com/a1aa/image/3qiBccBWwNJeJ6mPnui6lvjdU7LHQk5lePBzgGLIUdxeW8WnA.jpg', alt: 'Illustration of a person recording a podcast', width: 150, height: 150 },{ src: 'https://storage.googleapis.com/a1aa/image/EqqBGyztkRKJLRfuGMbo5COW7oBfH0itgtDVVvsBTd3hLeWnA.jpg', alt: 'Illustration of a person broadcasting news online', width: 150, height: 150 }]
+      +CircleImage(image.src, image.alt, image.width, image.height)

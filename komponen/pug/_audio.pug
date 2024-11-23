@@ -1,8 +1,8 @@
-mixin SongCard(image, altText, title, description, year, link)
+mixin SongCard(image, alt, title, description, year, link)
   .song-card
-    a(href=link)
-      img(src=image, alt=altText, class="song-image")
-      .song-info
-        h3.title #{title}
-        p.description #{description}
-        span.year #{year}
+    a(href=link, class="song-card-link")
+      img(src=image, alt=alt, class="song-card-image")
+      .song-card-content
+        h3.song-card-title= title
+        p.song-card-description= description
+        span.song-card-year= year

@@ -410,10 +410,10 @@ body {
 
 .image-container-terpopuler img {
   border-radius: 15px;
-  width: 300px;
+  width: 250px;
   height: auto;
   margin-bottom: 20px;
-  margin-left: -205px;
+  margin-left: 55px;
 }
 
 /* Circle Images Section */
@@ -1012,8 +1012,9 @@ ul li {
 }
 
 .image-container img {
-  width: 370px;
+  width: 100px;
   height: auto;
+  margin-top: 200px;
 }
 
 /* berita */

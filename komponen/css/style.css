@@ -401,7 +401,7 @@ body {
 }
 
 /* Image Container */
-.image-container-terpopuler {
+.image-containerpop {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -410,7 +410,7 @@ body {
 
 .image-container-terpopuler img {
   border-radius: 15px;
-  width: 250px;
+  width: 500px;
   height: auto;
   margin-bottom: 20px;
   margin-left: 55px;
@@ -432,7 +432,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  mar
 }
 
 .circle-terpopuler {
@@ -1011,7 +1010,7 @@ ul li {
   margin-top: 20px;
 }
 
-.image-container img {
+.image-containerpop img {
   width: 100px;
   height: auto;
   margin-top: 200px;

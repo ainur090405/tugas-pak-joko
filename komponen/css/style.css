@@ -343,7 +343,7 @@ body {
   width: 300px;
   height: auto;
   border-radius: 10px;
-  margin-left: 1050px;
+  margin-left: 600px;
 }
 
 /* Image Container */
@@ -410,10 +410,10 @@ body {
 
 .image-container-terpopuler img {
   border-radius: 15px;
-  width: 300px;
+  width: 250px;
   height: auto;
   margin-bottom: 20px;
-  margin-left: -205px;
+  margin-left: 55px;
 }
 
 /* Circle Images Section */
@@ -923,7 +923,7 @@ body.kes {
 
 /*audio */
 
-.heading {
+.headingau {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
@@ -931,7 +931,7 @@ body.kes {
   margin-bottom: 2rem;
 }
 
-.card {
+.cardau {
   background-color: white; 
   border-radius: 4.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -1011,13 +1011,14 @@ ul li {
   margin-top: 20px;
 }
 
-.image-container img {
-  width: 370px;
+.image-containerpopuler img {
+  width: 100px;
   height: auto;
+  margin-top: 200px;
 }
 
 /* berita */
-.containerberita {
+.containerbr {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 1rem;
@@ -1030,7 +1031,7 @@ ul li {
       width: 470px;
       margin-top: 9rem;
   }
-  .card img {
+  .cardbr img {
       width: 475px;
       height: 180px;
       transition: transform 0.3s ease;

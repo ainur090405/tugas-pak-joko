@@ -410,7 +410,7 @@ body {
 
 .image-container-terpopuler img {
   border-radius: 15px;
-  width: 500px;
+  width: 210px;
   height: auto;
   margin-bottom: 20px;
   margin-left: 55px;
@@ -973,7 +973,7 @@ body.kes {
   margin-left: auto;
 }
 /*pedoman*/
-.container {
+.containerbb {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -1034,7 +1034,7 @@ ul li {
       width: 470px;
       margin-top: 9rem;
   }
-  .cardbr img {
+  .card img {
       width: 475px;
       height: 180px;
       transition: transform 0.3s ease;

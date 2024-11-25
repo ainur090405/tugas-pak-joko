@@ -3,18 +3,16 @@ extends komponen/pug/_template.pug
 block content
  .div.container-terpopuler
   .div.content-terpopuler
-    h1 BERITA HIBURAN
-    p Kisruh antara HYBE dan ADOR memanas kembali hingga kini terlibat langsung dengan NewJeans. Hal itu terjadi setelah girl grup tersebut blak-blakan mengenai situasi yang mereka hadapi selama ini.
+    h1 BERITA TERPOPULER
+    p Warganet Indonesia di berbagai platform media sosial ramai membagikan gambar lambang burung garuda berlatar belakang warna biru yang bertuliskan "Peringatan Darurat". Gerakan "Peringatan Darurat" ini membanjiri media sosial di tengah upaya DPR dan pemerintah menganulir putusan Mahkamah Konstitusi (MK) yang mengubah ambang batas syarat pencalonan kepala daerah.
     p.dots-terpopuler
       | ...............................................................................................................................
   .div.image-container-terpopuler
-    img(
-      src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/01/2024/10/02/Screenshot_142-3716872193.jpg", 
-      alt="Illustration of a person holding multiple microphones", 
-      width="300", 
-      height="200"
-    )
+    img(src="https://storage.googleapis.com/a1aa/image/zcGUZRwdFu5fQij5xZfNXWw3vdCeFTog5EKewD6Cw1ZebxbdC.jpg", alt="Illustration of a person holding multiple microphones", width="300", height="200")
+  
 
-  .circle-image-container
-    each image in [{ src: 'https://foto.kontan.co.id/IOpWwTcT1n6-rqWVE_FSKmRe2Pk=/smart/2023/04/04/1091846403p.jpg', alt: 'Illustration of a news reporter with a microphone', width: 150, height: 150 },{ src: 'https://storage.googleapis.com/a1aa/image/3qiBccBWwNJeJ6mPnui6lvjdU7LHQk5lePBzgGLIUdxeW8WnA.jpg', alt: 'Illustration of a person recording a podcast', width: 150, height: 150 },{ src: 'https://storage.googleapis.com/a1aa/image/EqqBGyztkRKJLRfuGMbo5COW7oBfH0itgtDVVvsBTd3hLeWnA.jpg', alt: 'Illustration of a person broadcasting news online', width: 150, height: 150 }]
-      +CircleImage(image.src, image.alt, image.width, image.height)
+  +CircleImageContainer([
+    { src: 'https://storage.googleapis.com/a1aa/image/YZ8xb2yG2GbsMZYwsemdtH7YIwxydRfbolxPhojxRdGcLeWnA.jpg', alt: 'Illustration of a news reporter with a microphone', width: 150, height: 150 },
+    { src: 'https://storage.googleapis.com/a1aa/image/3qiBccBWwNJeJ6mPnui6lvjdU7LHQk5lePBzgGLIUdxeW8WnA.jpg', alt: 'Illustration of a person recording a podcast', width: 150, height: 150 },
+    { src: 'https://storage.googleapis.com/a1aa/image/EqqBGyztkRKJLRfuGMbo5COW7oBfH0itgtDVVvsBTd3hLeWnA.jpg', alt: 'Illustration of a person broadcasting news online', width: 150, height: 150 }
+  ])

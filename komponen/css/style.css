@@ -401,7 +401,7 @@ body {
 }
 
 /* Image Container */
-.image-container-terpopuler {
+.image-containerpop {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -432,7 +432,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  mar
 }
 
 .circle-terpopuler {
@@ -1011,7 +1010,11 @@ ul li {
   margin-top: 20px;
 }
 
+<<<<<<< HEAD
+.image-containerpop img {
+=======
 .image-containerpopuler img {
+>>>>>>> origin/main
   width: 100px;
   height: auto;
   margin-top: 200px;

@@ -1,8 +1,8 @@
 mixin SongCard(image, alt, title, description, year, link)
   .song-card
-    a(href=link, class="song-card-link")
-      img(src=image, alt=alt, class="song-card-image")
-      .song-card-content
-        h3.song-card-title= title
-        p.song-card-description= description
-        span.song-card-year= year
+    img(src=image, alt=alt)
+    h3= title
+    p= description
+    span= year
+    a(href=link) Listen
+  

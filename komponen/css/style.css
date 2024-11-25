@@ -922,7 +922,7 @@ body.kes {
 
 /*audio */
 
-.heading {
+.headingau {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
@@ -930,7 +930,7 @@ body.kes {
   margin-bottom: 2rem;
 }
 
-.card {
+.cardau {
   background-color: white; 
   border-radius: 4.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -1010,14 +1010,18 @@ ul li {
   margin-top: 20px;
 }
 
+<<<<<<< HEAD
 .image-containerpop img {
+=======
+.image-containerpopuler img {
+>>>>>>> origin/main
   width: 100px;
   height: auto;
   margin-top: 200px;
 }
 
 /* berita */
-.containerberita {
+.containerbr {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 1rem;
@@ -1030,7 +1034,7 @@ ul li {
       width: 470px;
       margin-top: 9rem;
   }
-  .card img {
+  .cardbr img {
       width: 475px;
       height: 180px;
       transition: transform 0.3s ease;
